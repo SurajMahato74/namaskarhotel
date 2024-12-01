@@ -220,18 +220,6 @@
     margin-right: 10px;
 }
 
-@media (max-width: 768px) {
-    .owl-carousel {
-        display: flex;
-        overflow-x: scroll; /* Enables horizontal scrolling on mobile */
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-    }
-
-    .owl-carousel .item {
-        min-width: 250px; /* Adjust the width of each carousel item */
-        margin-right: 10px;
-    }
-}
 
 
     @media (max-width: 768px) {
@@ -242,7 +230,32 @@
     }
 </style>
 
+<style>
+    @media (max-width: 767px) {
+    #best-places {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
+    .owl-carousel.owl-carousel-wide {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .owl-carousel.owl-carousel-wide .item {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Hide the specific content on mobile view */
+    .txt4, .txt5 {
+        display: none;
+    }
+}
+
+</style>
 
 </style>
 
@@ -1290,7 +1303,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
 
-                <div class="copyrights">Copyright @2018 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Mecovache</a>. All Rights Reserve
+                <div class="copyrights">Copyright @2024 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Brandwave</a>. All Rights Reserve
                 </div>
 
             </div>
