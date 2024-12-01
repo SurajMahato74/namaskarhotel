@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SUMMER HOTEL Delvatore Bootstrap 4 theme</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/superslides.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Hotel icon styling */
+.hotel-icon {
+    font-size: 100px;
+    color: #f39c12; /* Change the color to your preference */
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+</style>
+
+<style>
+/* Center the popup */
+.body-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the popup */
+    width: 60%;
+    height: 80%;
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.left-section, .right-section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-section {
+    background-color: #b30000;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.left-section p {
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.left-section img {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.right-section {
+    background-color: white;
+    color: #333;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Position the offer icon at the top right */
+.offer-icon {
+    position: absolute;
+    margin-top: -130px;
+    right: -30px;
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 70px; /* Adjust based on offer icon size */
+    border: 1px solid #333;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.right-section h2 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.right-section p {
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.right-section button {
+    border: 2px solid #333;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.right-section button:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #333;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .body-popup {
+        width: 90%;
+        height: 80%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .left-section h1, .right-section h2 {
+        font-size: 1.4em;
+    }
+
+    .left-section p, .right-section p {
+        font-size: 0.9em;
+    }
+}
+</style>
+
+<style>
+    .container {
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            margin-bottom: 10px;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .wave {
+            margin: 10px 0;
+        }
+        .hotel-name {
+            font-size: 2em;
+            letter-spacing: 0.2em;
+            margin: 10px 0;
+        }
+        .estd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .estd i {
+            margin: 0 10px;
+        }
+</style>
+
+
+
+</head>
+<body class="front" data-spy="scroll" data-target="#top-inner" data-offset="0">
+
+      
+
+<div id="main">
+    <div class="search-wrapper">
+        <div class="container">
+            <div class="search-inner clearfix">
+                <div class="search-field">
+                    <input type="text" class="form-control" value="" placeholder="Enter Your Search...">
+                </div>
+                <a href="#" class="search-btn search-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="top-wrapper top-wrapper-dark">
+        <div class="top-inner" id="top-inner">
+            <div class="top1-wrapper">
+                <div class="container">
+                    <div class="top1 clearfix">
+                        <div class="currency dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrency2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Np Rupees
+                         </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownCurrency2">
+                                <a class="dropdown-item" href="#">EURO</a>
+                                <a class="dropdown-item" href="#">US DOLLAR</a>
+                                <a class="dropdown-item" href="#">POUND STERLING</a>
+                                <a class="dropdown-item" href="#">GEORGIAN LARI</a>
+                            </div>
+                        </div>
+                        <div class="language dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownLanguage2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <img src="images/nepal-flag.png" alt="" class="img-fluid">Nepal
+                         </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLanguage2">
+                                <a class="dropdown-item" href="#"><img src="images/flag1.jpg" alt="" class="img-fluid">English
+                                    (UK)</a>
+                                <a class="dropdown-item" href="#"><img src="images/flag3.jpg" alt="" class="img-fluid">German</a>
+                                <a class="dropdown-item" href="#"><img src="images/flag5.jpg" alt="" class="img-fluid">Georgian</a>
+                                <a class="dropdown-item" href="#"><img src="images/flag4.jpg" alt="" class="img-fluid">Russian</a>
+
+                            </div>
+                        </div>
+                        <a href="#" class="search-btn search-open"><i class="fa fa-search"></i></a>
+                        <div class="social-wrapper">
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="account dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownAccount2"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sign in
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownAccount2">
+                                <a class="dropdown-item" href="#">EDIT PROFILE</a>
+                                <a class="dropdown-item" href="#">SIGN OUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top2-wrapper">
+                <div class="container">
+                    <div class="top2 clearfix">
+                        <header>
+                            <div class="logo_wrapper">
+                                <a href="index.html" class="logo">
+                                    <img src="images/logo-white.png" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </header>
+                        <nav class="navbar_ navbar navbar-expand-md clearfix">
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                                <ul class="nav navbar-nav sf-menu clearfix">
+                                    <li class="nav-item"><a href="index.html" class="active nav-link">Home</a></li>
+                                    <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
+                                    <li class="nav-item"><a href="rooms.html" class="nav-link">Our Rooms</a></li>
+                                    <li class="nav-item sub-menu sub-menu-2">
+                                        <a href="#" class="nav-link">Pages <i class="fa fa-angle-down"
+                                                                              aria-hidden="true"></i></a>
+                                        <div class="sf-mega">
+                                            <ul>
+
+                                                <li><a href="about.html">About us</a>
+                                                <li><a href="rooms.html">Rooms</a>
+                                                <li><a href="reservation.html">Reservation</a>
+                                                <li><a href="details.html">Room Details</a>
+                                                <li><a href="404.html">404 Page</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item sub-menu sub-menu-2">
+                                        <a href="#" class="nav-link">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <div class="sf-mega">
+                                            <ul>
+
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="post.html">Blog Post</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item"><a href="contacts.html" class="nav-link">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="home" class="">
+        <div id="home-inner" class="home-inner">
+            <div id="slides_wrapper" class="">
+                <div id="slides">
+                    <ul class="slides-container">
+                        <li>
+                            <img src="images/slide01.jpg" alt="" class="img">
+                        </li>
+                        <li>
+                            <img src="images/slide04.jpg" alt="" class="img">
+                        </li>
+                        <li>
+                            <img src="images/slide05.jpg" alt="" class="img">
+                        </li>
+                        <li>
+                            <img src="images/slide04.jpg" alt="" class="img">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slide-text-wrapper" style="text-align: center; padding: 10px;">
+                <div class="container" style="margin: -50 auto;">
+                   
+                   
+               
+                    <div class="slide-text clearfix" style="position: relative; display: inline-block;">
+                        <!-- Hotel Icon -->
+                        <div class="img1" style="margin-bottom: 10px;">
+                            <i class="fas fa-hotel" style="font-size: 50px; color: #f39c12; display: block;"></i>
+                        </div>
+                        <span id="typingText" style="font-size: 48px; font-weight: bold; color: #ffffff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; display: inline-block;">
+                            <!-- Text will be typed here -->
+                        </span>
+                         
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add Font Awesome for the icon -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+            
+            
+            
+            <div class="slide-buttons-wrapper">
+                <div class="container">
+                    <div class="slide-buttons clearfix">
+                        <div class="slide-button">
+                            <a href="#">
+                                <div class="ic"><img src="images/slide-ic1.png" alt="" class="img-fluid"></div>
+                                <div class="hr"></div>
+                                <div class="txt1">Room</div>
+                            </a>
+                        </div>
+                        <div class="slide-button">
+                            <a href="#">
+                                <div class="ic"><img src="images/slide-ic2.png" alt="" class="img-fluid"></div>
+                                <div class="hr"></div>
+                                <div class="txt1">Food</div>
+                            </a>
+                        </div>
+                        <div class="slide-button">
+                            <a href="#">
+                                <div class="ic"><img src="images/slide-ic3.png" alt="" class="img-fluid"></div>
+                                <div class="hr"></div>
+                                <div class="txt1">Event Booking</div>
+                            </a>
+                        </div>
+                        <div class="slide-button">
+                            <a href="#">
+                                <div class="ic"><img src="images/slide-ic4.png" alt="" class="img-fluid"></div>
+                                <div class="hr"></div>
+                                <div class="txt1">24 / 7 Support</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="booking-wrapper">
+            <div class="container">
+                <div class="booking-inner clearfix">
+                    <form action="javascript:;" class="form1 clearfix">
+                        <div class="col1 c1">
+                            <div class="input1_wrapper">
+                                <label>Check in</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Check in">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col1 c2">
+                            <div class="input1_wrapper">
+                                <label>Check out</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Check out">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c3">
+                            <div class="select1_wrapper">
+                                <label>Adults</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2">2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c4">
+                            <div class="select1_wrapper">
+                                <label>Children</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">Children</option>
+                                        <option value="1">1 Child</option>
+                                        <option value="2">2 Children</option>
+                                        <option value="3">3 Children</option>
+                                        <option value="4">4 Children</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c5">
+                            <div class="select1_wrapper">
+                                <label>Rooms</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                        <option value="3">3 Rooms</option>
+                                        <option value="4">4 Rooms</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col3 c6">
+                            <button type="submit" class="btn-form1-submit">CHECK AVAILABILITY</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="latest-news" style="background-image: url(images/4850022.jpg);">
+        <div class="container">
+    
+            <div class="title1 text-center">Make Reservation</div>
+            <div class="title2 text-center mb-4">Lorem ipsum dolor sit amet concateur non troppo di saronno la prada</div>
+    
+            <div class="row">
+                <!-- Wedding Reservation Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="latest-news-wrapper" >
+                        <div class="latest-news-inner">
+                            <div class="latest-news clearfix">
+                                <figure>
+                                    <img src="images/weeding.jpeg" alt="Wedding Reservation" class="img-fluid rounded">
+                                </figure>
+                                <div class="caption mt-3">
+                                    <div class="txt1" style="font-size: 1.5em; font-weight: bold; color: #333;">
+                                        <a href="post.html" style="text-decoration: none;">Wedding Reservation</a>
+                                    </div>
+                                    <div class="txt2 mt-2" style="font-size: 1em; color: #555;">
+                                        Decoration || Food || Music || Honeymoon Suite
+                                    </div>
+                                    <hr style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;">
+                                    <a href="wedding-packages.html" class="btn-primary" style="background-color: transparent; color: black;">View Packages ➡️</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Events and Seminar Booking Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="latest-news-wrapper" >
+                        <div class="latest-news-inner">
+                            <div class="latest-news clearfix">
+                                <figure>
+                                    <img src="images/weeding.jpeg" alt="Events and Seminar Booking" class="img-fluid rounded">
+                                </figure>
+                                <div class="caption mt-3">
+                                    <div class="txt1" style="font-size: 1.5em; font-weight: bold; color: #333;">
+                                        <a href="post-left.html" style="text-decoration: none;">Events and Seminar Booking</a>
+                                    </div>
+                                    <div class="txt2 mt-2" style="font-size: 1em; color: #555;">
+                                        Meetings || Audio-Visual Setup || Refreshments || Dinner
+                                    </div>
+                                    <hr style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;">
+                                    <a href="event-packages.html" class=" btn-primary" style="background-color: transparent; color: black;">View Packages ➡️</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+        
+
+
+    <div id="rooms"  style="background-image: url('images/4850022.jpg'); background-size: cover; background-position: center center; padding: 50px 0;">
+        <div class="container">
+
+            <div class="title1">OUR ROOMS</div>
+
+            <div class="title2">Lorem ipsum dolor sit amet concateur non troppo di saronno la prada</div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="room-wrapper">
+                        <div class="room-inner">
+                            <div class="room">
+                                <figure>
+                                    <img src="images/room06.jpg" alt="" class="img-fluid">
+                                    <figcaption>
+                                        <div class="txt1">GRAND DELVATORE</div>
+                                        <div class="txt2">START FROM $450.00</div>
+                                    </figcaption>
+                                </figure>
+                                <div class="caption">
+                                    <div class="txt1">Grand Delux Room</div>
+                                    <div class="txt2">
+                                        39 REVEW
+                                        <div class="small-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="txt3">
+                                        Lorem ipsum dolor sit amet, con cateur non troppo di sarono. El brave al mundo.
+                                    </div>
+                                    <div class="txt4">
+                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
+                                                                             aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="select-txt">
+                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
+                                                                                    aria-hidden="true"></i></span></a>
+                                </div>
+                                <div class="room-icons">
+                                    <div class="room-ic room-ic-wifi">
+                                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                                        <div class="txt1">FREE WIFI</div>
+                                    </div>
+                                    <div class="room-ic room-ic-person">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <div class="txt1">MAX<br>PERSON</div>
+                                    </div>
+                                    <div class="room-ic room-ic-breakfast">
+                                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                                        <div class="txt1">BREAKFAST<br>INCLUDED</div>
+                                    </div>
+                                    <div class="room-ic room-ic-left">
+                                        <div class="txt0">4</div>
+                                        <div class="txt1">ROOMS LEFT</div>
+                                    </div>
+                                    <div class="room-ic room-ic-refund">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                        <div class="txt1">NO REFUND</div>
+                                    </div>
+                                    <div class="room-price">
+                                        <div class="txt1">$<span>450</span></div>
+                                        <div class="txt2">PER NIGHT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="room-wrapper">
+                        <div class="room-inner">
+                            <div class="room">
+                                <figure>
+                                    <img src="images/room04.jpg" alt="" class="img-fluid">
+                                    <figcaption>
+                                        <div class="txt1">KING DELVATORE</div>
+                                        <div class="txt2">START FROM $315.00</div>
+                                    </figcaption>
+                                </figure>
+                                <div class="caption">
+                                    <div class="txt1">King Delux Room</div>
+                                    <div class="txt2">
+                                        39 REVEW
+                                        <div class="small-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="txt3">
+                                        Lorem ipsum dolor sit amet, con cateur non troppo di sarono. El brave al mundo.
+                                    </div>
+                                    <div class="txt4">
+                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
+                                                                             aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="select-txt">
+                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
+                                                                                    aria-hidden="true"></i></span></a>
+                                </div>
+                                <div class="room-icons">
+                                    <div class="room-ic room-ic-wifi">
+                                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                                        <div class="txt1">FREE WIFI</div>
+                                    </div>
+                                    <div class="room-ic room-ic-person">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <div class="txt1">MAX<br>PERSON</div>
+                                    </div>
+                                    <div class="room-ic room-ic-breakfast">
+                                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                                        <div class="txt1">BREAKFAST<br>INCLUDED</div>
+                                    </div>
+                                    <div class="room-ic room-ic-left">
+                                        <div class="txt0">4</div>
+                                        <div class="txt1">ROOMS LEFT</div>
+                                    </div>
+                                    <div class="room-price">
+                                        <div class="txt1">$<span>315</span></div>
+                                        <div class="txt2">PER NIGHT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="room-wrapper">
+                        <div class="room-inner">
+                            <div class="room">
+                                <figure>
+                                    <img src="images/room05.jpg" alt="" class="img-fluid">
+                                    <figcaption>
+                                        <div class="txt1">CLASSIC DELVATORE</div>
+                                        <div class="txt2">START FROM $115.00</div>
+                                    </figcaption>
+                                </figure>
+                                <div class="caption">
+                                    <div class="txt1">Classic Room</div>
+                                    <div class="txt2">
+                                        87 REVEW
+                                        <div class="small-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="txt3">
+                                        Lorem ipsum dolor sit amet, con cateur non troppo di sarono. El brave al mundo.
+                                    </div>
+                                    <div class="txt4">
+                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
+                                                                             aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="select-txt">
+                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
+                                                                                    aria-hidden="true"></i></span></a>
+                                </div>
+                                <div class="room-icons">
+                                    <div class="room-ic room-ic-wifi">
+                                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                                        <div class="txt1">FREE WIFI</div>
+                                    </div>
+                                    <div class="room-ic room-ic-person">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <div class="txt1">MAX<br>PERSON</div>
+                                    </div>
+                                    <div class="room-ic room-ic-refund">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                        <div class="txt1">NO REFUND</div>
+                                    </div>
+                                    <div class="room-ic room-ic-left">
+                                        <div class="txt0">4</div>
+                                        <div class="txt1">ROOMS LEFT</div>
+                                    </div>
+                                    <div class="room-ic room-ic-discount">
+                                        <div class="txt0">0<span>%</span></div>
+                                        <div class="txt1">DISCOUNT</div>
+                                    </div>
+                                    <div class="room-price">
+                                        <div class="txt1">$<span>115</span></div>
+                                        <div class="txt2">PER NIGHT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+
+    <div id="best-places">
+        <div class="container">
+    
+            <div class="title1">BEST PLACES AROUND THE NAMASKAR</div>
+            <div class="title2">FIND YOUR PLACE</div>
+    
+            <div class="owl-carousel owl-carousel-wide">
+                <!-- Swimming Pools Section -->
+                <div class="item">
+                    <div class="place-wrapper">
+                        <div class="place-inner">
+                            <div class="place clearfix">
+                                <div class="caption">
+                                    <div class="txt1">BEST PLACE GALLERY</div>
+                                    <div class="text-block1">
+                                        <div class="text-block1-inner">
+                                            <div class="txt2">Swimming Pools</div>
+                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i> Resort Grounds, Main Namaskar Avenue</div>
+                                        </div>
+                                    </div>
+                                    <div class="txt4">
+                                        Enjoy our state-of-the-art swimming pools, perfect for relaxation and recreation. Features include temperature-controlled waters, poolside dining, and family-friendly amenities.
+                                    </div>
+                                    <div class="txt5">
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-sauna.jpg" alt="Sauna" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">Sauna</div>
+                                                <div class="rest1-txt2">INCLUDES</div>
+                                            </div>
+                                        </div>
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-spa.jpg" alt="Spa" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">SPA</div>
+                                                <div class="rest1-txt2">INCLUDES</div>
+                                            </div>
+                                        </div>
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-massage.jpg" alt="Massage" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">Free</div>
+                                                <div class="rest1-txt2">Massage</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <figure class="figure">
+                                    <img src="images/place01.jpg" alt="Swimming Pool" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seminar Hall Section -->
+                <div class="item">
+                    <div class="place-wrapper">
+                        <div class="place-inner">
+                            <div class="place clearfix">
+                                <div class="caption">
+                                    <div class="txt1">BEST PLACE GALLERY</div>
+                                    <div class="text-block1">
+                                        <div class="text-block1-inner">
+                                            <div class="txt2">Seminar Hall</div>
+                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i> Conference Center, Namaskar Complex</div>
+                                        </div>
+                                    </div>
+                                    <div class="txt4">
+                                        Our seminar hall is equipped with modern audio-visual technology, high-speed internet, and ergonomic seating, ideal for corporate events, workshops, and special gatherings.
+                                    </div>
+                                    <div class="txt5">
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-projector.jpg" alt="Projector" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">Projector</div>
+                                                <div class="rest1-txt2">INCLUDES</div>
+                                            </div>
+                                        </div>
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-refreshments.jpg" alt="Refreshments" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">Refreshments</div>
+                                                <div class="rest1-txt2">AVAILABLE</div>
+                                            </div>
+                                        </div>
+                                        <div class="rest1 clearfix">
+                                            <figure><img src="images/icon-wifi.jpg" alt="WiFi" class="img-fluid"></figure>
+                                            <div class="rest1-caption">
+                                                <div class="rest1-txt1">Free</div>
+                                                <div class="rest1-txt2">WiFi</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <figure class="figure">
+                                    <img src="images/place02.jpg" alt="Seminar Hall" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+        </div>
+    </div>
+
+
+
+
+
+    <div class="top-wrapper"></div>
+    <div id="about" style="background-image: url('images/1985.png'); background-size: cover; background-position: center center; padding: 50px 0;">
+        <div class="container">
+
+            <div class="title1">LITTLE ABOUT US</div>
+
+            <div class="title2">Your Destination for Unforgettable Stays and Celebrations"</div>
+
+            <div class="about-slider-wrapper clearfix">
+                <div class="about-slider-left">
+                    <figure class="about-slider-thumb">
+                        <img src="images/about00.jpg" alt="" class="img-fluid">
+                    </figure>
+                    <div class="slider-for">
+                        <div class="slider-item">   
+                            <img src="images/about01.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/about03.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/about02.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-slider-right">
+                    <div class="slider-nav">
+                        <div class="slider-item">
+                            <div class="txt1">
+                                Namaskar Hotel Biratnagar — Your one-stop destination for luxurious rooms.
+                            </div>
+                            
+                            <div class="txt2">
+                                <p>
+                                    "At Namaskar Hotel Biratnagar, our mission is to create an unforgettable experience for every guest. 
+                                    Whether you're here to celebrate life's special moments or enjoy a comfortable stay, our team is 
+                                    dedicated to delivering excellence in every detail."
+                                </p>
+                                <p>
+                                    "We take pride in offering luxurious accommodations, exceptional service, and the perfect venue for 
+                                    your events. Thank you for choosing us as your trusted destination for hospitality and celebrations."
+                                </p>
+                                <p style="text-align: right; font-weight: bold; margin-top: 10px;">- Manager, Namaskar Hotel</p>
+                            </div>
+                            
+                            <div class="txt3">
+                                GEORGE BAGRATION
+                            </div>
+                            <div class="txt4">
+                                MANAGER
+                            </div>
+                            <div class="txt5">
+                                HOTEL DELVATORE
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="txt1">
+                                Welcome to Namaskar Hotel Biratnagar, where luxury meets convenience.
+                            </div>
+                            <div class="txt2">
+                                <p>
+                                    At Namaskar Hotel, we offer world-class services, luxurious accommodations, and the perfect venue for any event. Our dedicated staff is here to ensure your stay or event is memorable and seamless.
+                                </p>
+                                <p>
+                                    Whether you're visiting for business or leisure, we provide an exceptional experience in a serene environment. Our hotel combines comfort, convenience, and elegance for all our guests.
+                                </p>
+                            </div>
+                            <div class="txt3">
+                                Anupam Adhikari
+                            </div>
+                            <div class="txt4">
+                                Staff Manager
+                            </div>
+                            <div class="txt5">
+                                Namaskar Hotel Biratnagar
+                            </div>
+                        </div>
+                        
+                        <div class="slider-item">
+                            <div class="txt1">
+                                Welcome to Namaskar Hotel, your perfect destination for luxury and unforgettable experiences.
+                            </div>
+                            <div class="txt2">
+                                <p>
+                                    Namaskar Hotel offers a unique blend of comfort and elegance, making it the ideal choice for both relaxation and celebrations. Our spacious rooms, fine dining, and world-class amenities ensure an unforgettable stay.
+                                </p>
+                                <p>
+                                    Whether you're here for business, a special event, or simply to unwind, our hotel promises to exceed your expectations. Our dedicated staff is committed to providing exceptional service for all your needs.
+                                </p>
+                            </div>
+                            <div class="txt3">
+                                Amit Gautam
+                            </div>
+                            <div class="txt4">
+                                Administrator
+                            </div>
+                            <div class="txt5">
+                                Namaskar Hotel Biratnagar
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="what-client-say">
+        <div class="container">
+    
+            <div class="title1">WHAT CLIENT SAY</div>
+    
+            <div class="title2">Our clients share their experiences and satisfaction with our services.</div>
+    
+            <div class="owl-carousel owl-carousel-testimonials">
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "I had a fantastic experience. The service was exceptional, and the team made everything so easy. Highly recommend!"
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Ram Sharma</div>
+                                        <div class="txt2">Software Developer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "The team was very professional, and the project was completed on time. I'm really pleased with the outcome!"
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Shyam Rathi</div>
+                                        <div class="txt2">Graphic Designer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "Great customer service! They really took the time to understand my needs and delivered a top-notch result."
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Hari Ghimire</div>
+                                        <div class="txt2">Entrepreneur</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "I was impressed with the professionalism and attention to detail. The entire process was seamless and effective."
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Gita Adhikari</div>
+                                        <div class="txt2">Marketing Specialist</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "This was one of the best collaborations I've ever had. The team exceeded my expectations in every way."
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Ram Sharma</div>
+                                        <div class="txt2">Software Developer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial clearfix">
+                                <div class="testimonial-caption">
+                                    "The experience was smooth and hassle-free. I'm truly happy with the service and the outcome!"
+                                </div>
+                                <div class="author clearfix">
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <div class="caption">
+                                        <div class="txt1">Shyam Rathi</div>
+                                        <div class="txt2">Graphic Designer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    <div class="bot1-wrapper">
+        <div class="container">
+            <div class="bot1 clearfix">
+                <div class="logo2_wrapper">
+                    <div class="footerlogocontainer">
+                        <div class="logo">
+                            <i class="fas fa-hotel" style="font-size: 50px; color: #f39c12; display: block;"></i>
+                        </div>
+                      
+                        <div class="hotel-name">
+                            NAMASKAR HOTEL
+                        </div>
+                        <div class="estd">
+                            <span>
+                                ESTD
+                            </span>
+                            <i class="fas fa-heart"></i>
+                            <span>
+                                1965
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social2-wrapper">
+                    <ul class="social2">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <p>
+                    <i>We are dedicated to delivering top-notch services, ensuring customer satisfaction with every project we undertake. Our team values professionalism, attention to detail, and timely delivery, making sure your needs are met with excellence.</i>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="bot2-wrapper">
+        <div class="container">
+            <div class="bot2 clearfix">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="bot2-title">Contact Info</div>
+                        <div class="contact1">
+                            <b>A:</b> Biratnagar 03, Mahendra Chock
+                        </div>
+                        <div class="contact1">
+                            <b>P:</b> +977 - 9805996874
+                        </div>
+                        <div class="contact1">
+                            <b>F:</b> +977 - 9805996874
+                        </div>
+                        <div class="contact1">
+                            <b>E:</b> <a href="#">info@namaskarhotel.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bot2-title">recent posts</div>
+                        <div class="recent-post clearfix">
+                            <a href="#">
+                                <figure><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></figure>
+                                <div class="caption">
+                                    <div class="txt1">New Aqua Park <br>Near The Hotel Delvatore</div>
+                                    <div class="txt2">1 December, 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="recent-post clearfix">
+                            <a href="#">
+                                <figure><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></figure>
+                                <div class="caption">
+                                    <div class="txt1">Botanic Garden <br>Near The Hotel Delvatore</div>
+                                    <div class="txt2">2 December, 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bot2-title">BEST PLACES AROUND DELVATORE</div>
+                        <ul class="best1 clearfix">
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bot3-wrapper">
+        <div class="container">
+            <div class="bot3 clearfix">
+                <ul class="menu-bot">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="copyrights">Copyright @2018 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Mecovache</a>. All Rights Reserve
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="body-popup" id="popup">
+    <div class="left-section">
+        <h1>Welcome to Namaskar Hotel!</h1>
+        <p style="color: white;">EXPERIENCE THE CHARM AND LUXURY OF OUR HOTEL IN BIRATNAGAR</p>
+        <img src="images/slide01.jpg" alt="Hotel Shanker building with a beautiful garden in front">
+    </div>
+    <div class="right-section">
+        <img src="images/offer.webp" alt="Exclusive Offer" class="offer-icon" />
+        <button class="close-button" id="close-popup">X</button>
+        <h2 style="text-align: left; margin-left: -130px;">Discover our <br>Exclusive Offers!</h2>
+        <p>We have tailored special offers just for you. Discover our exclusive deals and make your stay even more memorable!</p>
+        <p>Explore our exclusive deals now and enjoy great savings on your next booking.</p>
+        <button>SEE ALL OFFERS</button>
+    </div>
+    
+</div>
+
+<script>
+
+// Close the popup after 10 seconds
+setTimeout(() => {
+    document.getElementById('popup').style.display = 'none';
+}, 10000); // 10000ms = 10 seconds
+
+// Close the popup when the "Close" button is clicked
+document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+</script>
+
+
+<script>
+    const textElement = document.getElementById("typingText");
+    const textToType = "Welcome to Namaskar Hotel";
+    const typingSpeed = 100; // Speed of typing in milliseconds
+    const deletingSpeed = 50; // Speed of deleting in milliseconds
+    const delayBetweenLoops = 1500; // Delay before restarting the typing
+
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeText() {
+        if (!isDeleting && charIndex < textToType.length) {
+            // Add a character to the text
+            textElement.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, typingSpeed);
+        } else if (isDeleting && charIndex > 0) {
+            // Remove a character from the text
+            textElement.textContent = textToType.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(typeText, deletingSpeed);
+        } else if (charIndex === textToType.length) {
+            // Start deleting after a delay
+            setTimeout(() => {
+                isDeleting = true;
+                typeText();
+            }, delayBetweenLoops);
+        } else if (isDeleting && charIndex === 0) {
+            // Restart typing after deleting
+            isDeleting = false;
+            setTimeout(typeText, typingSpeed);
+        }
+    }
+
+    // Start the typing effect
+    typeText();
+</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.superslides.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/select2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/jquery.appear.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".animated-text");
+    textElement.style.opacity = "0"; // Initially hidden
+    setTimeout(() => {
+        textElement.style.opacity = "1"; // Fade in
+        textElement.classList.add("fadeInUp");
+    }, 500); // Delay in milliseconds
+});
+
+    </script>
+
+</body>
+</html>
