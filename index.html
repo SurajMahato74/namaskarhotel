@@ -60,19 +60,6 @@
     box-sizing: border-box;
 }
 
-    /* Hide the offer icon on mobile devices */
-@media (max-width: 768px) {
-    .offer-icon, h2 {
-        display: none;
-        
-    }
-   .right-section h2{
-        margin-left:60px;
-       display:none;
-    }
-}
-
-    
 .left-section {
     background-color: #b30000;
     color: white;
@@ -214,6 +201,33 @@
         font-size: 0.9em;
     }
 }
+
+.owl-carousel {
+    overflow: hidden;
+    display: block;
+}
+
+/* Make sure the container of owl carousel can scroll */
+.owl-carousel .item {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .owl-carousel {
+        display: flex;
+        overflow-x: scroll; /* Enables horizontal scrolling on mobile */
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+
+    .owl-carousel .item {
+        min-width: 250px; /* Adjust the width of each carousel item */
+        margin-right: 10px;
+    }
+}
+
+
+
+
 </style>
 
 <style>
@@ -533,8 +547,8 @@
         <div class="container">
     
             <div class="title1 text-center">Make Reservation</div>
-<div class="title2 text-center mb-4">Make your stay unforgettable with our luxurious accommodations.</div>
-
+            <div class="title2 text-center mb-4">Make your stay</div>
+    
             <div class="row">
                 <!-- Wedding Reservation Card -->
                 <div class="col-md-6 mb-4">
@@ -1286,6 +1300,27 @@
     </div>
     
 </div>
+
+
+<script>
+    $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items: 3, // Default items on larger screens
+        responsive: {
+            0: {
+                items: 1, // 1 item per view on mobile
+            },
+            768: {
+                items: 2, // 2 items per view on tablet
+            },
+            1024: {
+                items: 3, // 3 items per view on larger screens
+            }
+        }
+    });
+});
+
+    </script>
 
 <script>
 
