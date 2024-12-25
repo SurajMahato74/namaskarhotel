@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>SUMMER HOTEL Delvatore Bootstrap 4 theme</title>
+    <title>Namaskar Regency</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/superslides.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="css/select2.css" rel="stylesheet">
     <link href="css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
@@ -260,7 +261,6 @@
 
 </style>
 
-</style>
 
 <style>
     .container {
@@ -298,134 +298,320 @@
 
 </head>
 <body class="front" data-spy="scroll" data-target="#top-inner" data-offset="0">
+    <div id="main">
+        <div class="top-wrapper top-wrapper-dark">
+            <div class="top-inner" id="top-inner">
+                <div class="top2-wrapper">
+                   <div class="container">
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="nav navbar-nav sf-menu clearfix">
+                <li class="nav-item default-hover">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item">
+                    <a href="rooms.html" class="nav-link">
+                        <i class="bi bi-door-open"></i>
+                        <span>Rooms</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item sub-menu sub-menu-2">
+                    <a href="gallery.html" class="nav-link">
+                        <i class="bi bi-images"></i>
+                        <span>Gallery</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item ">
+                    <a href="about.html" class="nav-link">
+                        <i class="bi bi-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <hr />
+                </li>
+
+                <li class="nav-item">
+                    <a href="contacts.html" class="nav-link">
+                        <i class="bi bi-telephone"></i>
+                        <span>Contact</span>
+                    </a>
+                    <hr />
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <style>
+        /* Ensure navbar always displays as is */
+  .navbar-collapse {
+      display: flex !important; /* Ensure flex display for all screen sizes */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+  }
+  
+  .navbar-toggler {
+      display: none !important; /* Hide the toggle button completely */
+  }
+  
+  /* Make navbar responsive */
+  .navbar-nav {
+      flex-direction: row; /* Keep navigation items in a row */
+      position: fixed;
+      top: 10px; /* Adjust to your preference */
+      left: 50%; /* Center the navbar */
+      transform: translateX(-50%); /* Center-align adjustment */
+      background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+      padding: 10px 20px; /* Padding for spacing */
+      border-radius: 16px; /* Rounded corners */
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
+  }
+  
+  /* Ensure nav items scale properly on smaller screens */
+  .nav-item {
+      flex: 1; /* Adjust spacing for mobile */
+      margin: 0 5px; /* Space between items */
       
+  }
+  
+  .nav-item a {
+      font-size: 1rem; /* Adjust font size for readability */
+  }
+  
+  /* Adjust navbar for smaller screens */
+  @media (max-width: 768px) {
+  
+     /* Make navbar responsive */
+  .navbar-nav {
+      flex-direction: row; /* Keep navigation items in a row */
+      position: fixed;
+      top: 10px; /* Adjust to your preference */
+      left: 20%; /* Center the navbar */
+      transform: translateX(-50%); /* Center-align adjustment */
+      background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+      padding: 10px 20px; /* Padding for spacing */
+      border-radius: 16px; /* Rounded corners */
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
+  
+  }
+  
+  
+      .navbar-nav {
+          flex-wrap: wrap; /* Allow wrapping if needed */
+          padding: 10px; /* Adjust padding */
+          margin-left: -70px;
+      }
+      .nav-item {
+          margin: 5px; /* Increase margin for smaller screens */
+      }
+  }
+  
+      </style>
+      
+    
+    <style>
+ /* Updated Navbar CSS */
+.navbar-nav {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Fixed to the top */
+    top: 20px; /* Align to the top */
+    left: 43%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51)); /* Dark gradient */
+    padding: 0 0; /* Padding for spacing */
+    border-radius: 16px; /* Rounded edges */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Slightly darker shadow for contrast */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100%); /* Initially out of view */
+    animation: slideDown 1s forwards; /* Slide-down animation */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
 
-<div id="main">
-    <div class="search-wrapper">
-        <div class="container">
-            <div class="search-inner clearfix">
-                <div class="search-field">
-                    <input type="text" class="form-control" value="" placeholder="Enter Your Search...">
-                </div>
-                <a href="#" class="search-btn search-close"><i class="fa fa-times" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="top-wrapper top-wrapper-dark">
-        <div class="top-inner" id="top-inner">
-            <div class="top1-wrapper">
-                <div class="container">
-                    <div class="top1 clearfix">
-                        <div class="currency dropdown">
-                            <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrency2"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Np Rupees
-                         </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownCurrency2">
-                                <a class="dropdown-item" href="#">EURO</a>
-                                <a class="dropdown-item" href="#">US DOLLAR</a>
-                                <a class="dropdown-item" href="#">POUND STERLING</a>
-                                <a class="dropdown-item" href="#">GEORGIAN LARI</a>
-                            </div>
-                        </div>
-                        <div class="language dropdown">
-                            <a class="dropdown-toggle" href="#" role="button" id="dropdownLanguage2"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             <img src="images/nepal-flag.png" alt="" class="img-fluid">Nepal
-                         </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownLanguage2">
-                                <a class="dropdown-item" href="#"><img src="images/flag1.jpg" alt="" class="img-fluid">English
-                                    (UK)</a>
-                                <a class="dropdown-item" href="#"><img src="images/flag3.jpg" alt="" class="img-fluid">German</a>
-                                <a class="dropdown-item" href="#"><img src="images/flag5.jpg" alt="" class="img-fluid">Georgian</a>
-                                <a class="dropdown-item" href="#"><img src="images/flag4.jpg" alt="" class="img-fluid">Russian</a>
+/* Animation keyframes */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                            </div>
-                        </div>
-                        <a href="#" class="search-btn search-open"><i class="fa fa-search"></i></a>
-                        <div class="social-wrapper">
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="account dropdown">
-                            <a class="dropdown-toggle" href="#" role="button" id="dropdownAccount2"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sign in
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownAccount2">
-                                <a class="dropdown-item" href="#">EDIT PROFILE</a>
-                                <a class="dropdown-item" href="#">SIGN OUT</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="top2-wrapper">
-                <div class="container">
-                    <div class="top2 clearfix">
-                        <header>
-                            <div class="logo_wrapper">
-                                <a href="index.html" class="logo">
-                                    <img src="images/" alt="" class="img-fluid">
-                                </a>
-                            </div>
-                        </header>
-                        <nav class="navbar_ navbar navbar-expand-md clearfix">
+/* Style for nav items */
+.nav-item {
+    
+    text-align: center; /* Center align text and icons */
+    display: flex; /* Flex layout for icon and text */
+    align-items: center; /* Vertically center icon and text */
+    position: relative; /* For tooltip-like span positioning */
+}
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-                                <ul class="nav navbar-nav sf-menu clearfix">
-                                    <li class="nav-item"><a href="index.html" class="active nav-link">Home</a></li>
-                                    <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
-                                    <li class="nav-item"><a href="rooms.html" class="nav-link">Our Rooms</a></li>
-                                    <li class="nav-item sub-menu sub-menu-2">
-                                        <a href="#" class="nav-link">Pages <i class="fa fa-angle-down"
-                                                                              aria-hidden="true"></i></a>
-                                        <div class="sf-mega">
-                                            <ul>
-
-                                                <li><a href="about.html">About us</a>
-                                                <li><a href="rooms.html">Rooms</a>
-                                                <li><a href="reservation.html">Reservation</a>
-                                                <li><a href="details.html">Room Details</a>
-                                                <li><a href="404.html">404 Page</a>
-                                                </li>
+/* Change background color on hover */
+.nav-item:hover {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+    border-radius: 16px; /* Optional: add rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
 
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item sub-menu sub-menu-2">
-                                        <a href="#" class="nav-link">Events <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                        <div class="sf-mega">
-                                            <ul>
+/* Style for nav links */
+.nav-item a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underlines */
+    transition: background-color 0.2s ease, transform 0.3s ease; /* Smooth effects */
+    display: flex; /* Align content horizontally */
+    align-items: center; /* Center align */
+}
 
-                                                <li><a href="blog.html">Weeding</a></li>
-                                                <li><a href="post.html">Seminar</a></li>
+/* Hidden span text */
+.nav-item span {
+    font-size: 0.75rem; /* Text size */
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color */
+    margin-left: 8px; /* Space between icon and text */
+    overflow: hidden; /* Hide content */
+    white-space: nowrap; /* Prevent wrapping */
+    max-width: 0; /* Initially hidden */
+    opacity: 0; /* Fully transparent */
+   
+    transition: all 0.3s ease; /* Smooth reveal on hover */
+}
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item"><a href="contacts.html" class="nav-link">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+/* Show span text on hover */
+.nav-item:hover span {
+    max-width: 100px; /* Expand to fit content */
+    opacity: 1; /* Fully visible */
+
+
+}
+
+/* Zoom-in effect on icon hover */
+.navbar-nav a:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Icons styling */
+.nav-item i {
+    font-size: 1rem; /* Icon size */
+}
+
+/* Styling for hr */
+.nav-item hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    margin: 4px 0; /* Reduced margin for compactness */
+}
+
+/* Default hover effect */
+.default-hover {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+    border-radius: 16px;
+}
+
+.default-hover span {
+    max-width: 100px;
+    opacity: 1;
+}
+
+/* Active state styling */
+.nav-item.active {
+    background-color: rgba(0, 128, 0, 0.5); /* Greenish background for active state */
+    border-radius: 16px;
+}
+
+/* Transition for smooth effects */
+.nav-item {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Standard hover effect */
+.nav-item:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 16px;
+}
+
+
+
+</style>       
+    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll(".nav-item");
+    const defaultItem = document.querySelector(".default-hover");
+    let isClicked = false;
+
+    navItems.forEach((item) => {
+        // Handle mouseover (hover) events
+        item.addEventListener("mouseover", () => {
+            if (!isClicked) {
+                defaultItem.classList.remove("default-hover");
+            }
+        });
+
+        // Handle mouseout events
+        item.addEventListener("mouseout", () => {
+            if (!isClicked) {
+                // Restore default hover effect when mouse leaves all items
+                setTimeout(() => {
+                    const hovered = Array.from(navItems).some((nav) =>
+                        nav.matches(":hover")
+                    );
+                    if (!hovered) {
+                        defaultItem.classList.add("default-hover");
+                    }
+                }, 100); // Short delay to detect if the mouse is outside all items
+            }
+        });
+
+        // Handle click events
+        item.addEventListener("click", () => {
+            isClicked = true;
+
+            // Remove default-hover from the default item
+            defaultItem.classList.remove("default-hover");
+
+            // Remove active state from all nav items
+            navItems.forEach((nav) => nav.classList.remove("active"));
+
+            // Set the clicked item as active
+            item.classList.add("active");
+        });
+    });
+
+    // Reset to default-hover if no item is active and the mouse leaves
+    document.addEventListener("mousemove", () => {
+        const hovered = Array.from(navItems).some((nav) =>
+            nav.matches(":hover")
+        );
+        if (!hovered && !isClicked) {
+            defaultItem.classList.add("default-hover");
+        }
+    });
+});
+</script>
+
+
+
     <div id="home" class="">
         <div id="home-inner" class="home-inner">
             <div id="slides_wrapper" class="">
@@ -443,407 +629,317 @@
                         <li>
                             <img src="images/slide04.jpg" alt="" class="img">
                         </li>
-
                     </ul>
                 </div>
             </div>
+            <!-- Add the overlay directly to the wrapper container -->
+            <div class="slider-overlay"></div>
+        </div>
 
-            <div class="slide-text-wrapper" style="text-align: center; padding: 10px;">
+        <style>
+            /* Ensure the #slides_wrapper is positioned correctly */
+#slides_wrapper {
+    position: relative;
+}
+
+/* Slider Overlay */
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(121, 1, 1, 0.5); /* Transparent dark overlay */
+    z-index: 2; /* Overlay sits above images */
+    pointer-events: none; /* Allow interaction with slides below */
+}
+
+/* Style for the slider container and its images */
+#slides .slides-container {
+    position: relative;
+}
+
+#slides .slides-container li {
+    position: relative;
+}
+
+#slides .slides-container img {
+    width: 100%; /* Ensure images cover the full width */
+    height: auto;
+    display: block;
+}
+
+        </style>
+        
+
+            <div class="slide-text-wrapper" style="text-align: center; padding: 10px; margin-top: -80px;">
                 <div class="container" style="margin: -50 auto;">
-                   
-                   
-               
                     <div class="slide-text clearfix" style="position: relative; display: inline-block;">
-                        <!-- Hotel Icon -->
-                        <div class="img1" style="margin-bottom: 10px;">
-                            <i class="fas fa-hotel" style="font-size: 50px; color: #f39c12; display: block;"></i>
-                        </div>
-                        <span id="typingText" style="font-size: 48px; font-weight: bold; color: #ffffff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; display: inline-block;">
-                            <!-- Text will be typed here -->
-                        </span>
-                         
+                    
+                        <!-- Replacing typing text with image -->
+                        <img src="images/logo.png" alt="Your Image" style="max-width: 30%; height: auto; display: inline-block;">
                     </div>
                 </div>
             </div>
+
+            <style>
+           
+.animated-logo {
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5) translateY(50px); /* Smaller and slightly down */
+    transition: opacity 0.5s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+.animated-logo.visible {
+    opacity: 1; /* Fully visible */
+    transform: scale(1) translateY(0); /* Normal size and position */
+}
+
+/* Optional: Add bounce effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(200px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-20px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.slide-buttons .slide-button.active .ic {
+    background-color: maroon; /* Active icon background color */
+}
+
+.slide-buttons .slide-button a {
+    text-decoration: none; /* Remove underline from the links */
+    color: inherit; /* Ensure text color follows button state */
+}
+
+
+
+</style>
+
+            
             
             <!-- Add Font Awesome for the icon -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-            
-            
-            
-            <div class="slide-buttons-wrapper">
-                <div class="container">
-                    <div class="slide-buttons clearfix">
-                        <div class="slide-button">
-                            <a href="#">
-                                <div class="ic"><img src="images/slide-ic1.png" alt="" class="img-fluid"></div>
-                                <div class="hr"></div>
-                                <div class="txt1">Room</div>
-                            </a>
-                        </div>
-                        <div class="slide-button">
-                            <a href="#">
-                                <div class="ic"><img src="images/slide-ic2.png" alt="" class="img-fluid"></div>
-                                <div class="hr"></div>
-                                <div class="txt1">Food</div>
-                            </a>
-                        </div>
-                        <div class="slide-button">
-                            <a href="#">
-                                <div class="ic"><img src="images/slide-ic3.png" alt="" class="img-fluid"></div>
-                                <div class="hr"></div>
-                                <div class="txt1">Event Booking</div>
-                            </a>
-                        </div>
-                        <div class="slide-button">
-                            <a href="#">
-                                <div class="ic"><img src="images/slide-ic4.png" alt="" class="img-fluid"></div>
-                                <div class="hr"></div>
-                                <div class="txt1">24 / 7 Support</div>
-                            </a>
-                        </div>
-                    </div>
+ <div class="slide-buttons-wrapper">
+    <div class="slide-buttons clearfix">
+        <div class="slide-button" id="roomButton">
+            <a href="javascript:;">
+                <div class="ic" id="roomIcon">
+                    <img src="images/slide-ic1.png" alt="" class="img-fluid">
                 </div>
-            </div>
+                <div class="hr"></div>
+                <div class="txt1">Room</div>
+            </a>
         </div>
-        <div class="booking-wrapper">
-            <div class="container">
-                <div class="booking-inner clearfix">
-                    <form action="javascript:;" class="form1 clearfix">
-                        <div class="col1 c1">
-                            <div class="input1_wrapper">
-                                <label>Check in</label>
-                                <div class="input1_inner">
-                                    <input type="text" class="form-control input datepicker" placeholder="Check in">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col1 c2">
-                            <div class="input1_wrapper">
-                                <label>Check out</label>
-                                <div class="input1_inner">
-                                    <input type="text" class="form-control input datepicker" placeholder="Check out">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col2 c3">
-                            <div class="select1_wrapper">
-                                <label>Adults</label>
-                                <div class="select1_inner">
-                                    <select class="select2 select" style="width: 100%">
-                                        <option value="1">1 Adult</option>
-                                        <option value="2">2 Adults</option>
-                                        <option value="3">3 Adults</option>
-                                        <option value="4">4 Adults</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col2 c4">
-                            <div class="select1_wrapper">
-                                <label>Children</label>
-                                <div class="select1_inner">
-                                    <select class="select2 select" style="width: 100%">
-                                        <option value="1">Children</option>
-                                        <option value="1">1 Child</option>
-                                        <option value="2">2 Children</option>
-                                        <option value="3">3 Children</option>
-                                        <option value="4">4 Children</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col2 c5">
-                            <div class="select1_wrapper">
-                                <label>Rooms</label>
-                                <div class="select1_inner">
-                                    <select class="select2 select" style="width: 100%">
-                                        <option value="1">1 Room</option>
-                                        <option value="2">2 Rooms</option>
-                                        <option value="3">3 Rooms</option>
-                                        <option value="4">4 Rooms</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col3 c6">
-                            <button type="submit" class="btn-form1-submit">CHECK AVAILABILITY</button>
-                        </div>
-                    </form>
+        <div class="slide-button" id="eventButton">
+            <a href="javascript:;">
+                <div class="ic" id="eventIcon">
+                    <img src="images/slide-ic3.png" alt="" class="img-fluid">
                 </div>
-            </div>
+                <div class="hr"></div>
+                <div class="txt1">Event Booking</div>
+            </a>
         </div>
     </div>
+</div>
 
-    <div id="latest-news" style="background-image: url(images/4850022.jpg);">
-        <div class="container">
+
+<style>
     
-            <div class="title1 text-center">Make Reservation</div>
-            <div class="title2 text-center mb-4">Make your stay</div>
-    
-            <div class="row">
-                <!-- Wedding Reservation Card -->
-                <div class="col-md-6 mb-4">
-                    <div class="latest-news-wrapper" >
-                        <div class="latest-news-inner">
-                            <div class="latest-news clearfix">
-                                <figure>
-                                    <img src="images/weeding.jpeg" alt="Wedding Reservation" class="img-fluid rounded">
-                                </figure>
-                                <div class="caption mt-3">
-                                    <div class="txt1" style="font-size: 1.5em; font-weight: bold; color: #333;">
-                                        <a href="post.html" style="text-decoration: none;">Wedding Reservation</a>
-                                    </div>
-                                    <div class="txt2 mt-2" style="font-size: 1em; color: #555;">
-                                        Decoration || Food || Music || Honeymoon Suite
-                                    </div>
-                                    <hr style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;">
-                                    <a href="wedding-packages.html" class="btn-primary" style="background-color: transparent; color: black;">View Packages ➡️</a>
-                                </div>
-                            </div>
+    .slide-buttons-wrapper {
+        border: none;
+    }
+
+  
+    .slide-buttons .slide-button .ic {
+        background-color: transparent;
+        
+    }
+
+    .slide-buttons .slide-button.active .ic {
+        background-color: maroon;
+    }
+
+    .slide-buttons .slide-button a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const roomForm = document.getElementById("roomForm");
+        const eventForm = document.getElementById("eventForm");
+        const roomButton = document.getElementById("roomButton");
+        const eventButton = document.getElementById("eventButton");
+
+        // Default state
+        roomForm.style.display = "block";
+        eventForm.style.display = "none";
+        roomButton.classList.add("active");
+        eventButton.classList.remove("active");
+
+        // Function to set active button
+        function setActiveButton(activeButton, inactiveButton) {
+            activeButton.classList.add("active");
+            inactiveButton.classList.remove("active");
+        }
+
+        // Room button click event
+        roomButton.addEventListener("click", function () {
+            roomForm.style.display = "block";
+            eventForm.style.display = "none";
+            setActiveButton(roomButton, eventButton);
+        });
+
+        // Event button click event
+        eventButton.addEventListener("click", function () {
+            roomForm.style.display = "none";
+            eventForm.style.display = "block";
+            setActiveButton(eventButton, roomButton);
+        });
+    });
+</script>
+
+
+
+       <div class="booking-wrapper">
+    <div class="container">
+        <div class="booking-inner clearfix">
+            <!-- Room Form -->
+            <form id="roomForm" class="form1 clearfix">
+                <div class="col1 c1">
+                    <div class="input1_wrapper">
+                        <label>Check in</label>
+                        <div class="input1_inner">
+                            <input type="text" class="form-control input datepicker" placeholder="Check in">
                         </div>
                     </div>
                 </div>
-    
-                <!-- Events and Seminar Booking Card -->
-                <div class="col-md-6 mb-4">
-                    <div class="latest-news-wrapper" >
-                        <div class="latest-news-inner">
-                            <div class="latest-news clearfix">
-                                <figure>
-                                    <img src="images/weeding.jpeg" alt="Events and Seminar Booking" class="img-fluid rounded">
-                                </figure>
-                                <div class="caption mt-3">
-                                    <div class="txt1" style="font-size: 1.5em; font-weight: bold; color: #333;">
-                                        <a href="post-left.html" style="text-decoration: none;">Events and Seminar Booking</a>
-                                    </div>
-                                    <div class="txt2 mt-2" style="font-size: 1em; color: #555;">
-                                        Meetings || Audio-Visual Setup || Refreshments || Dinner
-                                    </div>
-                                    <hr style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;">
-                                    <a href="event-packages.html" class=" btn-primary" style="background-color: transparent; color: black;">View Packages ➡️</a>
-                                </div>
-                            </div>
+                <div class="col1 c2">
+                    <div class="input1_wrapper">
+                        <label>Check out</label>
+                        <div class="input1_inner">
+                            <input type="text" class="form-control input datepicker" placeholder="Check out">
                         </div>
                     </div>
                 </div>
-            </div>
-    
+                <div class="col2 c3">
+                    <div class="select1_wrapper">
+                        <label>Adults</label>
+                        <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                                <option value="1">1 Adult</option>
+                                <option value="2">2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4 Adults</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2 c4">
+                    <div class="select1_wrapper">
+                        <label>Children</label>
+                        <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                                <option value="1">Children</option>
+                                <option value="1">1 Child</option>
+                                <option value="2">2 Children</option>
+                                <option value="3">3 Children</option>
+                                <option value="4">4 Children</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2 c5">
+                    <div class="select1_wrapper">
+                        <label>Rooms</label>
+                        <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                                <option value="1">1 Room</option>
+                                <option value="2">2 Rooms</option>
+                                <option value="3">3 Rooms</option>
+                                <option value="4">4 Rooms</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col3 c6">
+                    <button type="submit" class="btn-form1-submit">CHECK AVAILABILITY</button>
+                </div>
+            </form>
+
+            <!-- Event Form -->
+            <form id="eventForm" class="form1 clearfix" style="display: none;">
+                <div class="col1 c1">
+                    <div class="input1_wrapper">
+                        <label>Event Date</label>
+                        <div class="input1_inner">
+                            <input type="text" class="form-control input datepicker" placeholder="Event Date">
+                        </div>
+                    </div>
+                </div>
+                 <div class="col1 c2">
+                    <div class="input1_wrapper">
+                        <label>End Date</label>
+                        <div class="input1_inner">
+                            <input type="text" class="form-control input datepicker" placeholder="Check out">
+                        </div>
+                    </div>
+                </div>
+                <div class="col2 c2">
+                    <div class="select1_wrapper">
+                        <label>Event Name</label>
+                        <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                                <option value="Wedding">Wedding</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Seminar">Seminar</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2 c3">
+                    <div class="input1_wrapper">
+                        <label>Expected Visitors</label>
+                        <div class="input1_inner">
+                            <input type="number" class="input" placeholder="Visitors" style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col2 c3">
+                    <div class="input1_wrapper">
+                        <label>Comments</label>
+                        <div class="input1_inner">
+                            <input type="text" class="input" placeholder="Comments" style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <div class="col3 c6">
+                    <button type="submit" class="btn-form1-submit">BOOK EVENT</button>
+                </div>
+            </form>
         </div>
     </div>
-    
+</div>
+    </div>
 
         
 
-
-    <div id="rooms"  style="background-image: url('images/4850022.jpg'); background-size: cover; background-position: center center; padding: 50px 0;">
-        <div class="container">
-
-            <div class="title1">OUR ROOMS</div>
-
-            <div class="title2"> Fully Furnished AC 24/7 suportwith 2 balcony room attach washroom</div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="room-wrapper">
-                        <div class="room-inner">
-                            <div class="room">
-                                <figure>
-                                    <img src="images/room06.jpg" alt="" class="img-fluid">
-                                    <figcaption>
-                                        <div class="txt1">GRAND DELVATORE</div>
-                                        <div class="txt2">START FROM $450.00</div>
-                                    </figcaption>
-                                </figure>
-                                <div class="caption">
-                                    <div class="txt1">Grand Delux Room</div>
-                                    <div class="txt2">
-                                        39 REVEW
-                                        <div class="small-stars">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="txt3">
-                                        Fully Furnished AC 24/7 suportwith 2 balcony room attach washroom
-                                    </div>
-                                    <div class="txt4">
-                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
-                                                                             aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="select-txt">
-                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i></span></a>
-                                </div>
-                                <div class="room-icons">
-                                    <div class="room-ic room-ic-wifi">
-                                        <i class="fa fa-wifi" aria-hidden="true"></i>
-                                        <div class="txt1">FREE WIFI</div>
-                                    </div>
-                                    <div class="room-ic room-ic-person">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <div class="txt1">MAX<br>PERSON</div>
-                                    </div>
-                                    <div class="room-ic room-ic-breakfast">
-                                        <i class="fa fa-coffee" aria-hidden="true"></i>
-                                        <div class="txt1">BREAKFAST<br>INCLUDED</div>
-                                    </div>
-                                    <div class="room-ic room-ic-left">
-                                        <div class="txt0">4</div>
-                                        <div class="txt1">ROOMS LEFT</div>
-                                    </div>
-                                    <div class="room-ic room-ic-refund">
-                                        <i class="fa fa-tags" aria-hidden="true"></i>
-                                        <div class="txt1">NO REFUND</div>
-                                    </div>
-                                    <div class="room-price">
-                                        <div class="txt1">$<span>450</span></div>
-                                        <div class="txt2">PER NIGHT</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="room-wrapper">
-                        <div class="room-inner">
-                            <div class="room">
-                                <figure>
-                                    <img src="images/room04.jpg" alt="" class="img-fluid">
-                                    <figcaption>
-                                        <div class="txt1">KING DELVATORE</div>
-                                        <div class="txt2">START FROM $315.00</div>
-                                    </figcaption>
-                                </figure>
-                                <div class="caption">
-                                    <div class="txt1">King Delux Room</div>
-                                    <div class="txt2">
-                                        39 REVEW
-                                        <div class="small-stars">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="txt3">
-                                        Lorem ipsum dolor sit amet, con cateur non troppo di sarono. El brave al mundo.
-                                    </div>
-                                    <div class="txt4">
-                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
-                                                                             aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="select-txt">
-                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i></span></a>
-                                </div>
-                                <div class="room-icons">
-                                    <div class="room-ic room-ic-wifi">
-                                        <i class="fa fa-wifi" aria-hidden="true"></i>
-                                        <div class="txt1">FREE WIFI</div>
-                                    </div>
-                                    <div class="room-ic room-ic-person">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <div class="txt1">MAX<br>PERSON</div>
-                                    </div>
-                                    <div class="room-ic room-ic-breakfast">
-                                        <i class="fa fa-coffee" aria-hidden="true"></i>
-                                        <div class="txt1">BREAKFAST<br>INCLUDED</div>
-                                    </div>
-                                    <div class="room-ic room-ic-left">
-                                        <div class="txt0">4</div>
-                                        <div class="txt1">ROOMS LEFT</div>
-                                    </div>
-                                    <div class="room-price">
-                                        <div class="txt1">$<span>315</span></div>
-                                        <div class="txt2">PER NIGHT</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="room-wrapper">
-                        <div class="room-inner">
-                            <div class="room">
-                                <figure>
-                                    <img src="images/room05.jpg" alt="" class="img-fluid">
-                                    <figcaption>
-                                        <div class="txt1">CLASSIC DELVATORE</div>
-                                        <div class="txt2">START FROM $115.00</div>
-                                    </figcaption>
-                                </figure>
-                                <div class="caption">
-                                    <div class="txt1">Classic Room</div>
-                                    <div class="txt2">
-                                        87 REVEW
-                                        <div class="small-stars">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="txt3">
-                                        Lorem ipsum dolor sit amet, con cateur non troppo di sarono. El brave al mundo.
-                                    </div>
-                                    <div class="txt4">
-                                        <a href="details.html">VIEW DETAIL<i class="fa fa-caret-right"
-                                                                             aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="select-txt">
-                                    <a href="details.html"><span>SELECT THIS ROOM<i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i></span></a>
-                                </div>
-                                <div class="room-icons">
-                                    <div class="room-ic room-ic-wifi">
-                                        <i class="fa fa-wifi" aria-hidden="true"></i>
-                                        <div class="txt1">FREE WIFI</div>
-                                    </div>
-                                    <div class="room-ic room-ic-person">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <div class="txt1">MAX<br>PERSON</div>
-                                    </div>
-                                    <div class="room-ic room-ic-refund">
-                                        <i class="fa fa-tags" aria-hidden="true"></i>
-                                        <div class="txt1">NO REFUND</div>
-                                    </div>
-                                    <div class="room-ic room-ic-left">
-                                        <div class="txt0">4</div>
-                                        <div class="txt1">ROOMS LEFT</div>
-                                    </div>
-                                    <div class="room-ic room-ic-discount">
-                                        <div class="txt0">0<span>%</span></div>
-                                        <div class="txt1">DISCOUNT</div>
-                                    </div>
-                                    <div class="room-price">
-                                        <div class="txt1">$<span>115</span></div>
-                                        <div class="txt2">PER NIGHT</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    
 
 
     <div id="best-places">
@@ -1300,10 +1396,10 @@
             <div class="bot3 clearfix">
                 <ul class="menu-bot">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Customer Service</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">rooms</a></li>
+                    <li><a href="#">events</a></li>
+                    <li><a href="#">login</a></li>
                 </ul>
 
                 <div class="copyrights">Copyright @2024 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Brandwave</a>. All Rights Reserve
@@ -1323,7 +1419,7 @@
         <img src="images/slide01.jpg" alt="Hotel Shanker building with a beautiful garden in front">
     </div>
     <div class="right-section">
-        <img src="images/offer.webp" alt="Exclusive Offer" class="offer-icon" />
+       
         <button class="close-button" id="close-popup">X</button>
         
         <p>We have tailored special offers just for you. Discover our exclusive deals and make your stay even more memorable!</p>
@@ -1332,6 +1428,88 @@
     </div>
     
 </div>
+
+<div id="loader" class="loader-wrapper">
+    <img src="images/logo.png" alt="Loading Logo" class="loader-logo">
+</div>
+
+
+<style>
+    /* Fullscreen Loader */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #800000; /* Matching your desired background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it's on top of everything */
+}
+
+/* Loader Logo Animation */
+.loader-logo {
+    max-width: 30%; /* Adjust size as needed */
+    height: auto;
+    animation: zoomInOut 1.5s infinite ease-in-out; /* Infinite animation loop */
+}
+
+/* Keyframes for Zoom In and Out */
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly zoomed in */
+    }
+}
+
+/* Hide main content initially */
+#main {
+    display: none; /* Hidden by default */
+}
+
+</style>
+
+
+<script>
+  
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('.animated-logo');
+
+    // Intersection Observer to detect visibility
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                logo.classList.add('visible'); // Add animation class when visible
+            } else {
+                logo.classList.remove('visible'); // Remove animation class when out of view
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+    observer.observe(logo);
+});
+</script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('loader');
+    const mainContent = document.getElementById('main');
+
+    // Simulate a loading delay for demonstration
+    setTimeout(() => {
+        loader.style.display = 'none'; // Hide the loader
+        mainContent.style.display = 'block'; // Show the main content
+    }, 2000); // Adjust delay as needed
+});
+
+</script>
 
 
 <script>
@@ -1368,44 +1546,6 @@ document.getElementById('close-popup').addEventListener('click', function() {
 </script>
 
 
-<script>
-    const textElement = document.getElementById("typingText");
-    const textToType = "Welcome to Namaskar Hotel";
-    const typingSpeed = 100; // Speed of typing in milliseconds
-    const deletingSpeed = 50; // Speed of deleting in milliseconds
-    const delayBetweenLoops = 1500; // Delay before restarting the typing
-
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeText() {
-        if (!isDeleting && charIndex < textToType.length) {
-            // Add a character to the text
-            textElement.textContent += textToType.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeText, typingSpeed);
-        } else if (isDeleting && charIndex > 0) {
-            // Remove a character from the text
-            textElement.textContent = textToType.substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(typeText, deletingSpeed);
-        } else if (charIndex === textToType.length) {
-            // Start deleting after a delay
-            setTimeout(() => {
-                isDeleting = true;
-                typeText();
-            }, delayBetweenLoops);
-        } else if (isDeleting && charIndex === 0) {
-            // Restart typing after deleting
-            isDeleting = false;
-            setTimeout(typeText, typingSpeed);
-        }
-    }
-
-    // Start the typing effect
-    typeText();
-</script>
-
 
 <script src="js/jquery.min.js"></script>
 <script src="js/superfish.js"></script>
@@ -1424,17 +1564,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
 <script src="js/scripts.js"></script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const textElement = document.querySelector(".animated-text");
-    textElement.style.opacity = "0"; // Initially hidden
-    setTimeout(() => {
-        textElement.style.opacity = "1"; // Fade in
-        textElement.classList.add("fadeInUp");
-    }, 500); // Delay in milliseconds
-});
 
-    </script>
 
 </body>
 </html>
