@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Contacts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/superslides.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="not-front page-contacts">
+    <div id="main">
+        <div class="top-wrapper top-wrapper-dark">
+            <div class="top-inner" id="top-inner">
+                <div class="top2-wrapper">
+                   <div class="container">
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="nav navbar-nav sf-menu clearfix">
+                <li class="nav-item ">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item ">
+                    <a href="rooms.html" class="nav-link">
+                        <i class="bi bi-door-open"></i>
+                        <span>Rooms</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item sub-menu sub-menu-2">
+                    <a href="gallery.html" class="nav-link default-hover">
+                        <i class="bi bi-images"></i>
+                        <span>Gallery</span>
+                    </a>
+                    <hr />
+                </li>
+                <li class="nav-item ">
+                    <a href="about.html" class="nav-link">
+                        <i class="bi bi-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <hr />
+                </li>
+
+                <li class="nav-item">
+                    <a href="contacts.html" class="nav-link ">
+                        <i class="bi bi-telephone"></i>
+                        <span>Contact</span>
+                    </a>
+                    <hr />
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <style>
+      /* Ensure navbar always displays as is */
+.navbar-collapse {
+    display: flex !important; /* Ensure flex display for all screen sizes */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-toggler {
+    display: none !important; /* Hide the toggle button completely */
+}
+
+/* Make navbar responsive */
+.navbar-nav {
+    flex-direction: row; /* Keep navigation items in a row */
+    position: fixed;
+    top: 10px; /* Adjust to your preference */
+    left: 50%; /* Center the navbar */
+    transform: translateX(-50%); /* Center-align adjustment */
+    background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+    padding: 10px 20px; /* Padding for spacing */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
+}
+
+/* Ensure nav items scale properly on smaller screens */
+.nav-item {
+    flex: 1; /* Adjust spacing for mobile */
+    margin: 0 5px; /* Space between items */
+    
+}
+
+.nav-item a {
+    font-size: 1rem; /* Adjust font size for readability */
+}
+
+/* Adjust navbar for smaller screens */
+@media (max-width: 768px) {
+
+   /* Make navbar responsive */
+.navbar-nav {
+    flex-direction: row; /* Keep navigation items in a row */
+    position: fixed;
+    top: 10px; /* Adjust to your preference */
+    left: 20%; /* Center the navbar */
+    transform: translateX(-50%); /* Center-align adjustment */
+    background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+    padding: 10px 20px; /* Padding for spacing */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
+
+}
+
+
+    .navbar-nav {
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        padding: 10px; /* Adjust padding */
+        margin-left: -70px;
+    }
+    .nav-item {
+        margin: 5px; /* Increase margin for smaller screens */
+    }
+}
+
+    </style>
+    <style>
+    /* Updated Navbar CSS */
+    .navbar-nav {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Fixed to the top */
+    top: 20px; /* Align to the top */
+    left: 43%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51)); /* Dark gradient */
+    padding: 0 0; /* Padding for spacing */
+    border-radius: 16px; /* Rounded edges */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Slightly darker shadow for contrast */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100%); /* Initially out of view */
+    animation: slideDown 1s forwards; /* Slide-down animation */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    
+    /* Animation keyframes */
+    @keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    /* Style for nav items */
+    .nav-item {
+    
+    text-align: center; /* Center align text and icons */
+    display: flex; /* Flex layout for icon and text */
+    align-items: center; /* Vertically center icon and text */
+    position: relative; /* For tooltip-like span positioning */
+    }
+    
+    /* Change background color on hover */
+    .nav-item:hover {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+    border-radius: 16px; /* Optional: add rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+    
+    
+    /* Style for nav links */
+    .nav-item a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underlines */
+    transition: background-color 0.2s ease, transform 0.3s ease; /* Smooth effects */
+    display: flex; /* Align content horizontally */
+    align-items: center; /* Center align */
+    }
+    
+    /* Hidden span text */
+    .nav-item span {
+    font-size: 0.75rem; /* Text size */
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color */
+    margin-left: 8px; /* Space between icon and text */
+    overflow: hidden; /* Hide content */
+    white-space: nowrap; /* Prevent wrapping */
+    max-width: 0; /* Initially hidden */
+    opacity: 0; /* Fully transparent */
+    
+    transition: all 0.3s ease; /* Smooth reveal on hover */
+    }
+    
+    /* Show span text on hover */
+    .nav-item:hover span {
+    max-width: 100px; /* Expand to fit content */
+    opacity: 1; /* Fully visible */
+    
+    
+    }
+    
+    /* Zoom-in effect on icon hover */
+    .navbar-nav a:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    }
+    
+    /* Icons styling */
+    .nav-item i {
+    font-size: 1rem; /* Icon size */
+    }
+    
+    /* Styling for hr */
+    .nav-item hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    margin: 4px 0; /* Reduced margin for compactness */
+    }
+    
+    /* Default hover effect */
+    .default-hover {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+    border-radius: 16px;
+    }
+    
+    .default-hover span {
+    max-width: 100px;
+    opacity: 1;
+    }
+    
+    /* Active state styling */
+    .nav-item.active {
+    background-color: rgba(0, 128, 0, 0.5); /* Greenish background for active state */
+    border-radius: 16px;
+    }
+    
+    /* Transition for smooth effects */
+    .nav-item {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    /* Standard hover effect */
+    .nav-item:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 16px;
+    }
+    
+    
+    
+    </style>       
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll(".nav-item");
+    const defaultItem = document.querySelector(".default-hover");
+    let isClicked = false;
+    
+    navItems.forEach((item) => {
+        // Handle mouseover (hover) events
+        item.addEventListener("mouseover", () => {
+            if (!isClicked) {
+                defaultItem.classList.remove("default-hover");
+            }
+        });
+    
+        // Handle mouseout events
+        item.addEventListener("mouseout", () => {
+            if (!isClicked) {
+                // Restore default hover effect when mouse leaves all items
+                setTimeout(() => {
+                    const hovered = Array.from(navItems).some((nav) =>
+                        nav.matches(":hover")
+                    );
+                    if (!hovered) {
+                        defaultItem.classList.add("default-hover");
+                    }
+                }, 100); // Short delay to detect if the mouse is outside all items
+            }
+        });
+    
+        // Handle click events
+        item.addEventListener("click", () => {
+            isClicked = true;
+    
+            // Remove default-hover from the default item
+            defaultItem.classList.remove("default-hover");
+    
+            // Remove active state from all nav items
+            navItems.forEach((nav) => nav.classList.remove("active"));
+    
+            // Set the clicked item as active
+            item.classList.add("active");
+        });
+    });
+    
+    // Reset to default-hover if no item is active and the mouse leaves
+    document.addEventListener("mousemove", () => {
+        const hovered = Array.from(navItems).some((nav) =>
+            nav.matches(":hover")
+        );
+        if (!hovered && !isClicked) {
+            defaultItem.classList.add("default-hover");
+        }
+    });
+    });
+    </script>
+    
+    <div id="content">
+        <div class="container" style="margin-top: 60px;">
+
+         
+            <div class="title1" style="color: #750000;">Namaskar Regency Gallery</div>
+
+            <div class="title2">Lorem ipsum dolor sit amet concateur non troppo di saronno la prada</div>
+         
+ 
+            <!-- Gallery -->
+      <div class="scrollblock">
+        <div class="container-fluid pt-10">
+           <div class="row justify-content-md-center ">
+              <div class="col-md-10 col-sm-12">
+                 <div class="card-columns">
+                    <div class="card card-hover h-100" >
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/r-1.webp" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p> Curabitur non nulla</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100" >
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/room04.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Vivamus magna convallis</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/about02.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Lacinia eget consectetur</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/about03.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Convallis a pellentesque</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/r-1.webp" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Egestas non nisi</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/room04.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Vivamus magna convallis</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/room05.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Eget malesuada lacinia</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/room06.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Donec rutrum congue</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                    <div class="card card-hover h-100">
+                       <div class="card-body">
+                          <a href="index.html">
+                             <img class="card-img-top" src="images/room05.jpg" alt="Card image cap">
+                             <div class="reveal h-100 p-2 d-flex ">
+                                <div class="w-100 align-self-center">
+                                   <p>Magna eget rutrum</p>
+                                </div>
+                             </div>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!-- End Gallery -->
+     
+     
+         
+         </div>
+            <div class="bot1-wrapper">
+        <div class="container">
+            <div class="bot1 clearfix">
+                <div class="logo2_wrapper">
+                    <a href="index.html" class="logo2">
+                        <img src="images/logo2.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="social2-wrapper">
+                    <ul class="social2">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <p>
+                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum, ex at convallis
+                        interdum, <br>justo lectus posuere nulla, at consequat odio mauris quis sem. </i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bot2-wrapper">
+        <div class="container">
+            <div class="bot2 clearfix">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="bot2-title">Contact Info</div>
+                        <div class="contact1">
+                            <b>A:</b> 41 Gridgum Sreet 121/2 New-York, USA
+                        </div>
+                        <div class="contact1">
+                            <b>P:</b> (00) 123 456 789
+                        </div>
+                        <div class="contact1">
+                            <b>F:</b> (00) 987 654 321
+                        </div>
+                        <div class="contact1">
+                            <b>E:</b> <a href="#">info.contact@yourdomain.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bot2-title">recent posts</div>
+                        <div class="recent-post clearfix">
+                            <a href="#">
+                                <figure><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></figure>
+                                <div class="caption">
+                                    <div class="txt1">New Aqua Park <br>Near The Hotel Delvatore</div>
+                                    <div class="txt2">11 March, 2018</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="recent-post clearfix">
+                            <a href="#">
+                                <figure><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></figure>
+                                <div class="caption">
+                                    <div class="txt1">Botanic Garden <br>Near The Hotel Delvatore</div>
+                                    <div class="txt2">23 March, 2018</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bot2-title">BEST PLACES AROUND DELVATORE</div>
+                        <ul class="best1 clearfix">
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                            <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bot3-wrapper">
+        <div class="container">
+            <div class="bot3 clearfix">
+                <ul class="menu-bot">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="copyrights">Copyright @2018 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Mecovache</a>. All Rights Reserve
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.superslides.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/select2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/yjsg.yjsgroundprogress.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false.js"></script>
+<script src="js/googlemap.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
