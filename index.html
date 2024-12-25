@@ -19,7 +19,7 @@
         /* Hotel icon styling */
 .hotel-icon {
     font-size: 100px;
-    color: #f39c12; /* Change the color to your preference */
+    color: #800000; /* Change the color to your preference */
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -370,26 +370,9 @@
   .navbar-toggler {
       display: none !important; /* Hide the toggle button completely */
   }
+
   
-  /* Make navbar responsive */
-  .navbar-nav {
-      flex-direction: row; /* Keep navigation items in a row */
-      position: fixed;
-      top: 10px; /* Adjust to your preference */
-      left: 50%; /* Center the navbar */
-      transform: translateX(-50%); /* Center-align adjustment */
-      background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
-      padding: 10px 20px; /* Padding for spacing */
-      border-radius: 16px; /* Rounded corners */
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
-  }
-  
-  /* Ensure nav items scale properly on smaller screens */
-  .nav-item {
-      flex: 1; /* Adjust spacing for mobile */
-      margin: 0 5px; /* Space between items */
-      
-  }
+ 
   
   .nav-item a {
       font-size: 1rem; /* Adjust font size for readability */
@@ -403,10 +386,10 @@
       flex-direction: row; /* Keep navigation items in a row */
       position: fixed;
       top: 10px; /* Adjust to your preference */
-      left: 20%; /* Center the navbar */
+      
       transform: translateX(-50%); /* Center-align adjustment */
       background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
-      padding: 10px 20px; /* Padding for spacing */
+      padding: 0;
       border-radius: 16px; /* Rounded corners */
       box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
   
@@ -415,16 +398,17 @@
   
       .navbar-nav {
           flex-wrap: wrap; /* Allow wrapping if needed */
-          padding: 10px; /* Adjust padding */
+         
           margin-left: -70px;
       }
       .nav-item {
-          margin: 5px; /* Increase margin for smaller screens */
+        margin-right: 10px ;
+          gap: 10px; /* Increase margin for smaller screens */
       }
   }
   
       </style>
-      
+
     
     <style>
  /* Updated Navbar CSS */
@@ -434,7 +418,7 @@
     align-items: center; /* Center items vertically */
     position: fixed; /* Fixed to the top */
     top: 20px; /* Align to the top */
-    left: 43%; /* Center horizontally */
+    left: 40%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51)); /* Dark gradient */
     padding: 0 0; /* Padding for spacing */
@@ -513,6 +497,8 @@
 /* Icons styling */
 .nav-item i {
     font-size: 1rem; /* Icon size */
+    margin-left: 4px;
+
 }
 
 /* Styling for hr */
@@ -690,6 +676,13 @@ document.addEventListener("DOMContentLoaded", function () {
     transition: opacity 0.5s ease, transform 0.7s ease;
     will-change: opacity, transform;
 }
+/* Mobile View: Apply negative margin */
+@media only screen and (max-width: 768px) {
+    .animated-logo {
+        margin-top: -20px; /* Adjust as needed */
+        transform: scale(0.5) translateY(0px); /* Adjust translateY if needed */
+    }
+}
 
 .animated-logo.visible {
     opacity: 1; /* Fully visible */
@@ -752,6 +745,10 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 
+
+
+
+
 <style>
     
     .slide-buttons-wrapper {
@@ -772,6 +769,20 @@ document.addEventListener("DOMContentLoaded", function () {
         text-decoration: none;
         color: inherit;
     }
+
+    @media only screen and (max-width: 768px) {
+        .slide-buttons-wrapper, 
+.slide-buttons-wrapper * {
+    margin-top: -500px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 5 !important;
+    position: static !important;
+    z-index: 99586699 !important;
+}
+
+}
+
 </style>
 
 
@@ -809,6 +820,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 </script>
+
+
 
 
 
@@ -936,10 +949,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </div>
 </div>
-    </div>
+</div>
 
         
-
 
 
     <div id="best-places">
