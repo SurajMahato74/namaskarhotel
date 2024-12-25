@@ -33,7 +33,8 @@
             <ul class="nav navbar-nav sf-menu clearfix">
                 <li class="nav-item ">
                     <a href="index.html" class="nav-link">
-                        <i class="bi bi-house-door"></i>
+                        <i class="bi bi-house-door" style="margin-left: 5px;"></i>
+                        
                         <span>Home</span>
                     </a>
                     <hr />
@@ -98,7 +99,7 @@
       left: 50%; /* Center the navbar */
       transform: translateX(-50%); /* Center-align adjustment */
       background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
-      padding: 10px 20px; /* Padding for spacing */
+     
       border-radius: 16px; /* Rounded corners */
       box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
   }
@@ -106,7 +107,7 @@
   /* Ensure nav items scale properly on smaller screens */
   .nav-item {
       flex: 1; /* Adjust spacing for mobile */
-      margin: 0 5px; /* Space between items */
+      right: 0;
       
   }
   
@@ -125,7 +126,7 @@
       left: 20%; /* Center the navbar */
       transform: translateX(-50%); /* Center-align adjustment */
       background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
-      padding: 10px 20px; /* Padding for spacing */
+      
       border-radius: 16px; /* Rounded corners */
       box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
   
@@ -134,12 +135,10 @@
   
       .navbar-nav {
           flex-wrap: wrap; /* Allow wrapping if needed */
-          padding: 10px; /* Adjust padding */
+          
           margin-left: -70px;
       }
-      .nav-item {
-          margin: 5px; /* Increase margin for smaller screens */
-      }
+      
   }
   
       </style>
@@ -200,18 +199,20 @@
     transition: background-color 0.2s ease, transform 0.3s ease; /* Smooth effects */
     display: flex; /* Align content horizontally */
     align-items: center; /* Center align */
+  
     }
     
     /* Hidden span text */
     .nav-item span {
     font-size: 0.75rem; /* Text size */
     color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color */
-    margin-left: 8px; /* Space between icon and text */
+    margin-left: 8px;/* Space between icon and text */
     overflow: hidden; /* Hide content */
     white-space: nowrap; /* Prevent wrapping */
     max-width: 0; /* Initially hidden */
     opacity: 0; /* Fully transparent */
-    
+    margin-right: 5px;
+
     transition: all 0.3s ease; /* Smooth reveal on hover */
     }
     
@@ -231,6 +232,7 @@
     /* Icons styling */
     .nav-item i {
     font-size: 1rem; /* Icon size */
+    margin-left: 3px;
     }
     
     /* Styling for hr */
