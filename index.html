@@ -64,7 +64,15 @@
     margin: 0 auto;
     text-align: center;
 }
-
+  .btn-form1-submit{display: block; padding: 0; border: none; margin: 0; width: 100%; background: #fab100; color: #fff; font-size: 12px; text-transform: uppercase; text-decoration: underline; line-height: 66px;position: relative; cursor: pointer;
+transition: all 0.3s ease-out;
+}
+.navbar-nav {
+        top: 10px;
+        left: 65%;
+        transform: translateX(-50%);
+        z-index: 2000;
+    }
 
 
 
@@ -75,7 +83,9 @@
         height: 60vh !important; /* Reduce height for mobile */
         overflow: hidden;
     }
-
+  .btn-form1-submit{display: block; padding: 0; border: none; margin: 0; width: 100%; background: #fab100; color: #fff; font-size: 12px; text-transform: uppercase; text-decoration: underline; line-height: 40px;position: relative; cursor: pointer;
+transition: all 0.3s ease-out;
+}
     #slides .slides-container img {
         width: 100%;
         height: 50vh; /* Match container height */
@@ -98,21 +108,21 @@
 
     /* Booking Form Fixes */
     .booking-wrapper {
-        margin-top: 220px; /* Add spacing above form */
         padding: 0 10px; /* Add padding for mobile */
     }
 
     .booking-inner {
-        flex-direction: column; /* Stack form elements vertically */
+        flex-direction: column; 
         padding: 15px;
-        background: rgba(255, 255, 255, 0.95); /* Slightly opaque background */
+        margin-top: -140px; 
+        background: rgba(255, 255, 255, 0.95); 
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .form1 .col1, .form1 .col2, .form1 .col3 {
-        width: 100%; /* Full width for form fields */
-        margin-bottom: 15px; /* Add spacing between fields */
+        width: 100%; 
+        margin-bottom: -5px; 
     }
 
     .input1_wrapper, .select1_wrapper {
@@ -125,25 +135,10 @@
         font-size: 14px;
     }
 
-    .btn-form1-submit {
-        width: 100%;
-        padding: 12px;
-        background-color: #800000;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        line-height: unset !important;
-    }
-
-    .btn-form1-submit:hover {
-        background-color: #600000;
-        padding: 10px !important;
-    }
 
     /* Toggle Buttons (Room and Event Booking) Fixes */
     .slide-buttons-wrapper {
-        margin-top: -150px !important; /* Adjust positioning for mobile */
+        margin-top: -350px !important; /* Adjust positioning for mobile */
         display: flex !important;
         justify-content: center;
         z-index: 1000 !important;
@@ -152,9 +147,8 @@
     .slide-buttons {
         display: flex !important;
         flex-direction: row;
-        gap: 10px;
+        justify-content: center;
         background: rgba(255, 255, 255, 0.9);
-        padding: 10px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
@@ -205,7 +199,7 @@
     /* Ensure navbar doesn't overlap content */
     .navbar-nav {
         top: 10px;
-        left: 50%;
+        left: 55%;
         transform: translateX(-50%);
         z-index: 2000;
     }
@@ -457,23 +451,22 @@
             margin-bottom: 10px;
         }
         .logo img {
-            width: 50px;
-            height: 50px;
+            width: 120px;
+            height: auto;
         }
         .wave {
             margin: 10px 0;
         }
         .hotel-name {
-            font-size: 2em;
-            letter-spacing: 0.2em;
-            margin: 10px 0;
+            font-size: 20px;
+            margin:0;
         }
         .estd {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1em;
-            margin-top: 10px;
+    
         }
         .estd i {
             margin: 0 10px;
@@ -572,12 +565,11 @@
       flex-direction: row; /* Keep navigation items in a row */
       position: fixed;
       top: 10px; /* Adjust to your preference */
-      
       transform: translateX(-50%); /* Center-align adjustment */
       background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
       padding: 0;
-      border-radius: 16px; /* Rounded corners */
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Shadow for better visibility */
+      border-radius: 16px !important; /* Rounded corners */
+      
   
   }
   
@@ -599,17 +591,16 @@
     <style>
  /* Updated Navbar CSS */
 .navbar-nav {
-    display: flex; /* Use flexbox for horizontal alignment */
+    display: flex; 
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Center items vertically */
     position: fixed; /* Fixed to the top */
     top: 20px; /* Align to the top */
-    left: 40%; /* Center horizontally */
+    left: 35%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51)); /* Dark gradient */
     padding: 0 0; /* Padding for spacing */
-    border-radius: 16px; /* Rounded edges */
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4); /* Slightly darker shadow for contrast */
+    border-radius: 16px !important; /* Rounded edges */
     opacity: 0; /* Initially hidden */
     transform: translateY(-100%); /* Initially out of view */
     animation: slideDown 1s forwards; /* Slide-down animation */
@@ -630,18 +621,10 @@
 
 /* Style for nav items */
 .nav-item {
-    
     text-align: center; /* Center align text and icons */
     display: flex; /* Flex layout for icon and text */
     align-items: center; /* Vertically center icon and text */
     position: relative; /* For tooltip-like span positioning */
-}
-
-/* Change background color on hover */
-.nav-item:hover {
-    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
-    border-radius: 16px; /* Optional: add rounded corners for hover effect */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 
@@ -663,7 +646,6 @@
     white-space: nowrap; /* Prevent wrapping */
     max-width: 0; /* Initially hidden */
     opacity: 0; /* Fully transparent */
-   
     transition: all 0.3s ease; /* Smooth reveal on hover */
 }
 
@@ -672,12 +654,12 @@
     max-width: 100px; /* Expand to fit content */
     opacity: 1; /* Fully visible */
 
-
 }
 
 /* Zoom-in effect on icon hover */
 .navbar-nav a:hover {
     transform: scale(1.1); /* Slight zoom-in effect */
+    border-radius: 16px; /* Rounded corners on hover */
 }
 
 /* Icons styling */
@@ -687,17 +669,12 @@
 
 }
 
-/* Styling for hr */
-.nav-item hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-    margin: 4px 0; /* Reduced margin for compactness */
-}
 
 /* Default hover effect */
 .default-hover {
     background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
     border-radius: 16px;
+
 }
 
 .default-hover span {
@@ -719,7 +696,7 @@
 /* Standard hover effect */
 .nav-item:hover {
     background-color: rgba(255, 0, 0, 0.5);
-    border-radius: 16px;
+    border-radius: 16px; /* Rounded corners on hover */
 }
 
 
@@ -808,42 +785,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="slider-overlay"></div>
         </div>
 
-        <style>
-            /* Ensure the #slides_wrapper is positioned correctly */
-#slides_wrapper {
-    position: relative;
-}
-
-/* Slider Overlay */
-.slider-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(121, 1, 1, 0.5); /* Transparent dark overlay */
-    z-index: 2; /* Overlay sits above images */
-    pointer-events: none; /* Allow interaction with slides below */
-}
-
-/* Style for the slider container and its images */
-#slides .slides-container {
-    position: relative;
-}
-
-#slides .slides-container li {
-    position: relative;
-}
-
-#slides .slides-container img {
-    width: 100%; /* Ensure images cover the full width */
-    height: auto;
-    display: block;
-}
-
-        </style>
-        
-
             <div class="slide-text-wrapper">
                 <div class="container">
                     <div class="slide-text clearfix">
@@ -855,6 +796,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             <style>
+                .slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(121, 1, 1, 0.5); /* Transparent dark overlay */
+    z-index: 2; /* Overlay sits above images */
+    pointer-events: none; /* Allow interaction with slides below */
+}
            
 .animated-logo {
     opacity: 0; /* Initially hidden */
@@ -868,6 +819,11 @@ document.addEventListener("DOMContentLoaded", function () {
         margin-top: -20px; /* Adjust as needed */
         transform: scale(0.5) translateY(0px); /* Adjust translateY if needed */
     }
+    .logo-image {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+}
 }
 
 .animated-logo.visible {
@@ -902,7 +858,7 @@ document.addEventListener("DOMContentLoaded", function () {
 .slide-text-wrapper {
     text-align: center;
     padding: 10px;
-    margin-top: -80px;
+    margin-top: -400px;
 }
 
 .container {
@@ -915,7 +871,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 .logo-image {
-    max-width: 30%;
+    max-width: 45%;
     height: auto;
     display: inline-block;
 }
@@ -951,10 +907,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 
-
-
-
-
 <style>
     
     .slide-buttons-wrapper {
@@ -977,16 +929,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     @media only screen and (max-width: 768px) {
-        .slide-buttons-wrapper, 
-.slide-buttons-wrapper * {
-    margin-top: -400px;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 5 !important;
-    position: static !important;
-    z-index: 99586699 !important;
-}
-
+        .slide-buttons-wrapper{
+            margin-top: -400px;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 5 !important;
+            position: static !important;
+            z-index: 99586699 !important;
+        }
+        .slide-button {
+            z-index: 9;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            width: 120px;
+            transition: transform 0.3s ease;
+        }
 }
 
 </style>
@@ -1506,16 +1465,16 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </div>
     
-    
-    <div class="bot1-wrapper">
+    <div class="bot2-wrapper">
         <div class="container">
-            <div class="bot1 clearfix">
-                <div class="logo2_wrapper">
+            <div class="bot2 clearfix">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo2_wrapper">
                     <div class="footerlogocontainer">
                         <div class="logo">
-                            <i class="fas fa-hotel" style="font-size: 50px; color: #f39c12; display: block;"></i>
+                           <img src="./images/logo.png" alt="" width="100" height="100" class="img-fluid">
                         </div>
-                      
                         <div class="hotel-name">
                             NAMASKAR HOTEL
                         </div>
@@ -1530,41 +1489,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-                <div class="social2-wrapper">
-                    <ul class="social2">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    </ul>
-                </div>
-                <p>
-                    <i>We are dedicated to delivering top-notch services, ensuring customer satisfaction with every project we undertake. Our team values professionalism, attention to detail, and timely delivery, making sure your needs are met with excellence.</i>
-                </p>
-                
-            </div>
-        </div>
-    </div>
-    <div class="bot2-wrapper">
-        <div class="container">
-            <div class="bot2 clearfix">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="bot2-title">Contact Info</div>
-                        <div class="contact1">
-                            <b>A:</b> Biratnagar 03, Mahendra Chock
-                        </div>
-                        <div class="contact1">
-                            <b>P:</b> +977 - 9805996874
-                        </div>
-                        <div class="contact1">
-                            <b>F:</b> +977 - 9805996874
-                        </div>
-                        <div class="contact1">
-                            <b>E:</b> <a href="#">info@namaskarhotel.com</a>
-                        </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                        <div class="bot2-title">Contact Info</div>
+                        <ul style="list-style: none;text-align: start; line-height: 2rem;">
+                            <li><i class="bi bi-geo-alt-fill"></i> Biratnagar 03, Mahendra Chock</li>
+                            <li><i class="bi bi-telephone-fill"></i> +977 - 9805996874</li>
+                            <li><i class="bi bi-phone-fill"></i> +977 - 9805996874</li>
+                            <li><i class="bi bi-envelope-fill"></i> info@namaskarhotel.com</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3">
                         <div class="bot2-title">recent posts</div>
                         <div class="recent-post clearfix">
                             <a href="#">
@@ -1585,7 +1521,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="bot2-title">BEST PLACES AROUND DELVATORE</div>
                         <ul class="best1 clearfix">
                             <li><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-fluid"></a>
