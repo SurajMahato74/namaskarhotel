@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Namaskar Regency</title>
     <meta charset="utf-8">
@@ -15,751 +16,927 @@
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    
-<style>
-    /* Fullscreen Loader */
-.loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #800000; /* Matching your desired background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Make sure it's on top of everything */
-}
-
-/* Loader Logo Animation */
-.loader-logo {
-    max-width: 30%; /* Adjust size as needed */
-    height: auto;
-    animation: zoomInOut 1.5s infinite ease-in-out; /* Infinite animation loop */
-}
-
-/* Keyframes for Zoom In and Out */
-@keyframes zoomInOut {
-    0%, 100% {
-        transform: scale(1); /* Normal size */
-    }
-    50% {
-        transform: scale(1.2); /* Slightly zoomed in */
-    }
-}
-
-/* Hide main content initially */
-#main {
-    display: none; /* Hidden by default */
-}
-
-</style>
 
     <style>
-        /* Hotel icon styling */
-.hotel-icon {
-    font-size: 100px;
-    color: #800000; /* Change the color to your preference */
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-  .btn-form1-submit{display: block; padding: 0; border: none; margin: 0; width: 100%; background: #fab100; color: #fff; font-size: 12px; text-transform: uppercase; text-decoration: underline; line-height: 66px;position: relative; cursor: pointer;
-transition: all 0.3s ease-out;
-}
-.navbar-nav {
-        top: 10px;
-        left: 65%;
-        transform: translateX(-50%);
-        z-index: 2000;
-    }
-
-
-
-/* Mobile-specific styles to fix hero section, booking form, and toggle buttons */
-@media only screen and (max-width: 768px) {
-    /* Hero Section Fixes */
-    #home-inner, #slides_wrapper, #slides {
-        height: 60vh !important; /* Reduce height for mobile */
-        overflow: hidden;
-    }
-  .btn-form1-submit{display: block; padding: 0; border: none; margin: 0; width: 100%; background: #fab100; color: #fff; font-size: 12px; text-transform: uppercase; text-decoration: underline; line-height: 40px;position: relative; cursor: pointer;
-transition: all 0.3s ease-out;
-}
-    #slides .slides-container img {
-        width: 100%;
-        height: 50vh; /* Match container height */
-        object-fit: cover; /* Ensure image covers area without distortion */
-        object-position: center;
-    }
-
-    .slider-overlay {
-        height: 100%; /* Ensure overlay covers full hero section */
-    }
-
-    .slide-text-wrapper {
-        margin-top: -100px; /* Adjust positioning for mobile */
-    }
-
-    .animated-logo {
-        max-width: 50% !important; /* Smaller logo for mobile */
-        margin-top: -10px;
-    }
-
-    /* Booking Form Fixes */
-    .booking-wrapper {
-        padding: 0 10px; /* Add padding for mobile */
-    }
-
-    .booking-inner {
-        flex-direction: column; 
-        padding: 15px;
-        margin-top: -140px; 
-        background: rgba(255, 255, 255, 0.95); 
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .form1 .col1, .form1 .col2, .form1 .col3 {
-        width: 100%; 
-        margin-bottom: -5px; 
-    }
-
-    .input1_wrapper, .select1_wrapper {
-        width: 100%;
-    }
-
-    .input1_inner input, .select1_inner select {
-        width: 100% !important;
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .slide-text-wrapper{
-        margin-top: -415px !important; /* Adjust positioning for mobile */
-    }
-    /* Toggle Buttons (Room and Event Booking) Fixes */
-    .slide-buttons-wrapper {
-        margin-top: -325px !important; /* Adjust positioning for mobile */
-        display: flex !important;
-        justify-content: center;
-        z-index: 1000 !important;
-    }
-
-    .slide-buttons {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .slide-button {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        width: 120px;
-        transition: transform 0.3s ease;
-    }
-
-    .slide-button:hover {
-        transform: scale(1.05);
-    }
-
-    .slide-button .ic {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background-color: #ccc;
-    }
-
-    .slide-button.active .ic {
-        background-color: maroon !important;
-    }
-
-    .slide-button .ic img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .slide-button .txt1 {
-        font-size: 12px;
-        margin-top: 5px;
-        text-align: center;
-        color: #333;
-    }
-
-    .slide-button .hr {
-        display: none; /* Hide horizontal line for cleaner look */
-    }
-
-    /* Ensure navbar doesn't overlap content */
-    .navbar-nav {
-        top: 10px;
-        left: 55%;
-        transform: translateX(-50%);
-        z-index: 2000;
-    }
-}
-
-</style>
-
-<style>
-/* Center the popup */
-.body-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the popup */
-    width: 60%;
-    height: 80%;
-    display: flex;
-    font-family: 'Arial', sans-serif;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    z-index: 9999;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.left-section, .right-section {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.left-section {
-    background-color: #b30000;
-    color: white;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hide the offer icon on mobile devices */
-@media (max-width: 768px) {
-    .offer-icon {
-        display: none;
-    }
-    .right-section .h2{
-        display: none;
-    }
-}
-
-
-.left-section h1 {
-    font-size: 1.8em;
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.left-section p {
-    font-size: 1em;
-    margin: 10px 0;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.left-section img {
-    width: 90%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.right-section {
-    background-color: white;
-    color: #333;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Position the offer icon at the top right */
-.offer-icon {
-    position: absolute;
-    margin-top: -130px;
-    right: -30px;
-    width: 400px; /* Adjust size as needed */
-    height: auto;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 70px; /* Adjust based on offer icon size */
-    border: 1px solid #333;
-    background-color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-}
-
-.close-button:hover {
-    background-color: #333;
-    color: white;
-}
-
-.right-section h2 {
-    font-size: 1.8em;
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.right-section p {
-    font-size: 1em;
-    margin: 10px 0;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.right-section button {
-    border: 2px solid #333;
-    background-color: white;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.right-section button:hover {
-    background-color: #333;
-    color: white;
-}
-
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: 1px solid #333;
-    background-color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-}
-
-.close-button:hover {
-    background-color: #333;
-    color: white;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .body-popup {
-        width: 90%;
-        height: 80%;
-    }
-
-    .left-section, .right-section {
-        width: 100%;
-    }
-
-    .left-section h1, .right-section h2 {
-        font-size: 1.4em;
-    }
-
-    .left-section p, .right-section p {
-        font-size: 0.9em;
-    }
-}
-
-.owl-carousel {
-    overflow: hidden;
-    display: block;
-}
-
-/* Make sure the container of owl carousel can scroll */
-.owl-carousel .item {
-    margin-right: 10px;
-}
-
-
-
-    @media (max-width: 768px) {
-        /* Hide specific content on mobile devices */
-        .txt4, .txt5 {
-            display: none;
+        /* Fullscreen Loader */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #800000;
+            /* Matching your desired background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Make sure it's on top of everything */
         }
-    }
-</style>
 
-<style>
-    @media (max-width: 767px) {
-    #best-places {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+        /* Loader Logo Animation */
+        .loader-logo {
+            max-width: 30%;
+            /* Adjust size as needed */
+            height: auto;
+            animation: zoomInOut 1.5s infinite ease-in-out;
+            /* Infinite animation loop */
+        }
 
-    .owl-carousel.owl-carousel-wide {
-        display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-    }
+        /* Keyframes for Zoom In and Out */
+        @keyframes zoomInOut {
 
-    .owl-carousel.owl-carousel-wide .item {
-        flex-shrink: 0;
-        scroll-snap-align: start;
-    }
+            0%,
+            100% {
+                transform: scale(1);
+                /* Normal size */
+            }
 
-    /* Hide the specific content on mobile view */
-    .txt4, .txt5 {
-        display: none;
-    }
-}
+            50% {
+                transform: scale(1.2);
+                /* Slightly zoomed in */
+            }
+        }
 
-</style>
+        /* Hide main content initially */
+        #main {
+            display: none;
+            /* Hidden by default */
+        }
+    </style>
+    <style>
+        /* Hotel icon styling */
+        .hotel-icon {
+            font-size: 100px;
+            color: #800000;
+            /* Change the color to your preference */
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .btn-form1-submit {
+            display: block;
+            padding: 0;
+            border: none;
+            margin: 0;
+            width: 100%;
+            background: #fab100;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            line-height: 66px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        .navbar-nav {
+            top: 10px;
+            left: 65%;
+            transform: translateX(-50%);
+            z-index: 2000;
+        }
 
 
-<style>
-    .container {
+
+
+
+        /* Mobile-specific styles to fix hero section, booking form, and toggle buttons */
+        @media (max-width: 768px) {
+
+            /* Hero Section Fixes */
+            #home-inner,
+            #slides_wrapper,
+            #slides {
+                height: 60vh;
+                overflow: hidden;
+            }
+
+            .btn-form1-submit {
+                display: block;
+                padding: 0;
+                border: none;
+                margin: 0;
+                width: 100%;
+                background: #fab100;
+                color: #fff;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-decoration: underline;
+                line-height: 40px;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+            }
+
+            #slides .slides-container img {
+                width: 100%;
+                height: 50vh;
+                /* Match container height */
+                object-fit: cover;
+                /* Ensure image covers area without distortion */
+                object-position: center;
+            }
+
+            .slider-overlay {
+                height: 100%;
+            }
+
+            .slide-text-wrapper {
+                margin-top: -100px;
+                /* Adjust positioning for mobile */
+            }
+
+            .animated-logo {
+                max-width: 50% !important;
+                /* Smaller logo for mobile */
+                margin-top: -10px;
+            }
+
+            /* Booking Form Fixes */
+            .booking-wrapper {
+                padding: 0 10px;
+                /* Add padding for mobile */
+            }
+
+            .booking-inner {
+                flex-direction: column;
+                padding: 15px;
+                margin-top: -140px;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .form1 .col1,
+            .form1 .col2,
+            .form1 .col3 {
+                width: 100%;
+                margin-bottom: -5px;
+            }
+
+            .input1_wrapper,
+            .select1_wrapper {
+                width: 100%;
+            }
+
+            .input1_inner input,
+            .select1_inner select {
+                width: 100% !important;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+
+            .slide-buttons-wrapper {
+                margin-top: -325px !important;
+                /* Adjust positioning for mobile */
+                display: flex !important;
+                justify-content: center;
+                z-index: 1000 !important;
+            }
+
+            .slide-buttons {
+                display: flex !important;
+                flex-direction: row;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .slide-button {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                width: 120px;
+                transition: transform 0.3s ease;
+            }
+
+            .slide-button:hover {
+                transform: scale(1.05);
+            }
+
+            .slide-button .ic {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #ccc;
+            }
+
+            .slide-button.active .ic {
+                background-color: maroon !important;
+            }
+
+            .slide-button .ic img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .slide-button .txt1 {
+                font-size: 12px;
+                margin-top: 5px;
+                text-align: center;
+                color: #333;
+            }
+
+            .slide-button .hr {
+                display: none;
+                /* Hide horizontal line for cleaner look */
+            }
+
+            /* Ensure navbar doesn't overlap content */
+            .navbar-nav {
+                top: 10px;
+                left: 55%;
+                transform: translateX(-50%);
+                z-index: 2000;
+            }
+        }
+        /* iPhone X, XS, 11 Pro */
+        @media only screen 
+  and (device-width: 414px) 
+  and (device-height: 896px) 
+  and (-webkit-device-pixel-ratio: 2) {
+            #home-inner,
+            #slides_wrapper,
+            #slides {
+                height: 60vh !important;
+                overflow: hidden;
+            }
+
+            .btn-form1-submit {
+                width: 100%;
+                font-size: 12px;
+                background: #fab100;
+                color: white;
+            }
+
+            #slides .slides-container img {
+                width: 100%;
+                height: 60vh;
+                object-fit: cover;
+                object-position: center;
+            }
+            .slide-buttons-wrapper {
+                margin-top: -325px ;
+            }
+
+        }
+
+        @media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            #home-inner,
+            #slides_wrapper,
+            #slides {
+                height: 75vh !important;
+                ;
+                overflow: hidden;
+            }
+
+            .btn-form1-submit {
+                width: 100%;
+                font-size: 12px;
+                background: #fab100;
+                color: white;
+            }
+
+            #slides .slides-container img {
+                width: 100%;
+                height: 60vh;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .slide-buttons-wrapper {
+                margin-top: -325px !important;
+            }
+
+        }
+    </style>
+
+    <style>
+        /* Center the popup */
+        .body-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Centers the popup */
+            width: 60%;
+            height: 80%;
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .left-section,
+        .right-section {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left-section {
+            background-color: #b30000;
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hide the offer icon on mobile devices */
+        @media (max-width: 768px) {
+            .offer-icon {
+                display: none;
+            }
+
+            .right-section .h2 {
+                display: none;
+            }
+        }
+
+
+        .left-section h1 {
+            font-size: 1.8em;
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .left-section p {
+            font-size: 1em;
+            margin: 10px 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .left-section img {
+            width: 90%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .right-section {
+            background-color: white;
+            color: #333;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Position the offer icon at the top right */
+        .offer-icon {
+            position: absolute;
+            margin-top: -130px;
+            right: -30px;
+            width: 400px;
+            /* Adjust size as needed */
+            height: auto;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 70px;
+            /* Adjust based on offer icon size */
+            border: 1px solid #333;
+            background-color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .right-section h2 {
+            font-size: 1.8em;
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .right-section p {
+            font-size: 1em;
+            margin: 10px 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .right-section button {
+            border: 2px solid #333;
+            background-color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .right-section button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #333;
+            background-color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .body-popup {
+                width: 90%;
+                height: 80%;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+
+            .left-section h1,
+            .right-section h2 {
+                font-size: 1.4em;
+            }
+
+            .left-section p,
+            .right-section p {
+                font-size: 0.9em;
+            }
+        }
+
+        .owl-carousel {
+            overflow: hidden;
+            display: block;
+        }
+
+        /* Make sure the container of owl carousel can scroll */
+        .owl-carousel .item {
+            margin-right: 10px;
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            /* Hide specific content on mobile devices */
+            .txt4,
+            .txt5 {
+                display: none;
+            }
+        }
+    </style>
+
+    <style>
+        @media (max-width: 767px) {
+            #best-places {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .owl-carousel.owl-carousel-wide {
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+            }
+
+            .owl-carousel.owl-carousel-wide .item {
+                flex-shrink: 0;
+                scroll-snap-align: start;
+            }
+
+            /* Hide the specific content on mobile view */
+            .txt4,
+            .txt5 {
+                display: none;
+            }
+        }
+    </style>
+
+
+    <style>
+        .container {
             text-align: center;
             color: white;
         }
+
         .logo {
             margin-bottom: 10px;
         }
+
         .logo img {
             width: 120px;
             height: auto;
         }
+
         .wave {
             margin: 10px 0;
         }
+
         .hotel-name {
             font-size: 20px;
-            margin:0;
+            margin: 0;
         }
+
         .estd {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1em;
-    
+
         }
+
         .estd i {
             margin: 0 10px;
         }
-</style>
+    </style>
 
 
 
 </head>
+
 <body class="front" data-spy="scroll" data-target="#top-inner" data-offset="0">
     <div id="main">
         <div class="top-wrapper top-wrapper-dark">
             <div class="top-inner" id="top-inner">
                 <div class="top2-wrapper">
-                   <div class="container">
-    <nav class="navbar navbar-expand-md">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-            <ul class="nav navbar-nav sf-menu clearfix">
-                <li class="nav-item default-hover">
-                    <a href="index.html" class="nav-link">
-                        <i class="bi bi-house-door"></i>
-                        <span>Home</span>
-                    </a>
-                    <hr />
-                </li>
-                <li class="nav-item">
-                    <a href="rooms.html" class="nav-link">
-                        <i class="bi bi-door-open"></i>
-                        <span>Rooms</span>
-                    </a>
-                    <hr />
-                </li>
-                <li class="nav-item sub-menu sub-menu-2">
-                    <a href="gallery.html" class="nav-link">
-                        <i class="bi bi-images"></i>
-                        <span>Gallery</span>
-                    </a>
-                    <hr />
-                </li>
-                <li class="nav-item ">
-                    <a href="about.html" class="nav-link">
-                        <i class="bi bi-info-circle"></i>
-                        <span>About</span>
-                    </a>
-                    <hr />
-                </li>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                                <ul class="nav navbar-nav sf-menu clearfix">
+                                    <li class="nav-item default-hover">
+                                        <a href="index.html" class="nav-link">
+                                            <i class="bi bi-house-door"></i>
+                                            <span>Home</span>
+                                        </a>
+                                        <hr />
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="rooms.html" class="nav-link">
+                                            <i class="bi bi-door-open"></i>
+                                            <span>Rooms</span>
+                                        </a>
+                                        <hr />
+                                    </li>
+                                    <li class="nav-item sub-menu sub-menu-2">
+                                        <a href="gallery.html" class="nav-link">
+                                            <i class="bi bi-images"></i>
+                                            <span>Gallery</span>
+                                        </a>
+                                        <hr />
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="about.html" class="nav-link">
+                                            <i class="bi bi-info-circle"></i>
+                                            <span>About</span>
+                                        </a>
+                                        <hr />
+                                    </li>
 
-                <li class="nav-item">
-                    <a href="contacts.html" class="nav-link">
-                        <i class="bi bi-telephone"></i>
-                        <span>Contact</span>
-                    </a>
-                    <hr />
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-            </div>
+                                    <li class="nav-item">
+                                        <a href="contacts.html" class="nav-link">
+                                            <i class="bi bi-telephone"></i>
+                                            <span>Contact</span>
+                                        </a>
+                                        <hr />
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    
+
     <style>
         /* Ensure navbar always displays as is */
-  .navbar-collapse {
-      display: flex !important; /* Ensure flex display for all screen sizes */
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
-  }
-  
-  .navbar-toggler {
-      display: none !important; /* Hide the toggle button completely */
-  }
-
-  
- 
-  
-  .nav-item a {
-      font-size: 1rem; /* Adjust font size for readability */
-  }
-  
-  /* Adjust navbar for smaller screens */
-  @media (max-width: 768px) {
-  
-     /* Make navbar responsive */
-  .navbar-nav {
-      flex-direction: row; /* Keep navigation items in a row */
-      position: fixed;
-      top: 10px; /* Adjust to your preference */
-      transform: translateX(-50%); /* Center-align adjustment */
-      background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
-      padding: 0;
-      border-radius: 16px !important; /* Rounded corners */
-      
-  
-  }
-  
-  
-      .navbar-nav {
-          flex-wrap: wrap; /* Allow wrapping if needed */
-         
-          margin-left: -70px;
-      }
-      .nav-item {
-        margin-right: 10px ;
-          gap: 10px; /* Increase margin for smaller screens */
-      }
-  }
-  
-      </style>
-
-    
-    <style>
- /* Updated Navbar CSS */
-.navbar-nav {
-    display: flex; 
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center items vertically */
-    position: fixed; /* Fixed to the top */
-    top: 20px; /* Align to the top */
-    left: 35%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51)); /* Dark gradient */
-    padding: 0 0; /* Padding for spacing */
-    border-radius: 16px !important; /* Rounded edges */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-100%); /* Initially out of view */
-    animation: slideDown 1s forwards; /* Slide-down animation */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Animation keyframes */
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Style for nav items */
-.nav-item {
-    text-align: center; /* Center align text and icons */
-    display: flex; /* Flex layout for icon and text */
-    align-items: center; /* Vertically center icon and text */
-    position: relative; /* For tooltip-like span positioning */
-}
-
-
-/* Style for nav links */
-.nav-item a {
-    color: #fff; /* White text color */
-    text-decoration: none; /* Remove underlines */
-    transition: background-color 0.2s ease, transform 0.3s ease; /* Smooth effects */
-    display: flex; /* Align content horizontally */
-    align-items: center; /* Center align */
-}
-
-/* Hidden span text */
-.nav-item span {
-    font-size: 0.75rem; /* Text size */
-    color: rgba(255, 255, 255, 0.8); /* Slightly lighter text color */
-    margin-left: 8px; /* Space between icon and text */
-    overflow: hidden; /* Hide content */
-    white-space: nowrap; /* Prevent wrapping */
-    max-width: 0; /* Initially hidden */
-    opacity: 0; /* Fully transparent */
-    transition: all 0.3s ease; /* Smooth reveal on hover */
-}
-
-/* Show span text on hover */
-.nav-item:hover span {
-    max-width: 100px; /* Expand to fit content */
-    opacity: 1; /* Fully visible */
-
-}
-
-/* Zoom-in effect on icon hover */
-.navbar-nav a:hover {
-    transform: scale(1.1); /* Slight zoom-in effect */
-    border-radius: 16px; /* Rounded corners on hover */
-}
-
-/* Icons styling */
-.nav-item i {
-    font-size: 1rem; /* Icon size */
-    margin-left: 4px;
-
-}
-
-
-/* Default hover effect */
-.default-hover {
-    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
-    border-radius: 16px;
-
-}
-
-.default-hover span {
-    max-width: 100px;
-    opacity: 1;
-}
-
-/* Active state styling */
-.nav-item.active {
-    background-color: rgba(0, 128, 0, 0.5); /* Greenish background for active state */
-    border-radius: 16px;
-}
-
-/* Transition for smooth effects */
-.nav-item {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Standard hover effect */
-.nav-item:hover {
-    background-color: rgba(255, 0, 0, 0.5);
-    border-radius: 16px; /* Rounded corners on hover */
-}
-
-
-
-</style>       
-    
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navItems = document.querySelectorAll(".nav-item");
-    const defaultItem = document.querySelector(".default-hover");
-    let isClicked = false;
-
-    navItems.forEach((item) => {
-        // Handle mouseover (hover) events
-        item.addEventListener("mouseover", () => {
-            if (!isClicked) {
-                defaultItem.classList.remove("default-hover");
-            }
-        });
-
-        // Handle mouseout events
-        item.addEventListener("mouseout", () => {
-            if (!isClicked) {
-                // Restore default hover effect when mouse leaves all items
-                setTimeout(() => {
-                    const hovered = Array.from(navItems).some((nav) =>
-                        nav.matches(":hover")
-                    );
-                    if (!hovered) {
-                        defaultItem.classList.add("default-hover");
-                    }
-                }, 100); // Short delay to detect if the mouse is outside all items
-            }
-        });
-
-        // Handle click events
-        item.addEventListener("click", () => {
-            isClicked = true;
-
-            // Remove default-hover from the default item
-            defaultItem.classList.remove("default-hover");
-
-            // Remove active state from all nav items
-            navItems.forEach((nav) => nav.classList.remove("active"));
-
-            // Set the clicked item as active
-            item.classList.add("active");
-        });
-    });
-
-    // Reset to default-hover if no item is active and the mouse leaves
-    document.addEventListener("mousemove", () => {
-        const hovered = Array.from(navItems).some((nav) =>
-            nav.matches(":hover")
-        );
-        if (!hovered && !isClicked) {
-            defaultItem.classList.add("default-hover");
+        .navbar-collapse {
+            display: flex !important;
+            /* Ensure flex display for all screen sizes */
+            justify-content: center;
+            /* Center items horizontally */
+            align-items: center;
+            /* Center items vertically */
         }
-    });
-});
-</script>
+
+        .navbar-toggler {
+            display: none !important;
+            /* Hide the toggle button completely */
+        }
+
+
+
+
+        .nav-item a {
+            font-size: 1rem;
+            /* Adjust font size for readability */
+        }
+
+        /* Adjust navbar for smaller screens */
+        @media (max-width: 768px) {
+
+            /* Make navbar responsive */
+            .navbar-nav {
+                flex-direction: row;
+                /* Keep navigation items in a row */
+                position: fixed;
+                top: 10px;
+                /* Adjust to your preference */
+                transform: translateX(-50%);
+                /* Center-align adjustment */
+                background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+                padding: 0;
+                border-radius: 16px !important;
+                /* Rounded corners */
+
+
+            }
+
+
+            .navbar-nav {
+                flex-wrap: wrap;
+                /* Allow wrapping if needed */
+
+                margin-left: -70px;
+            }
+
+            .nav-item {
+                margin-right: 10px;
+                gap: 10px;
+                /* Increase margin for smaller screens */
+            }
+        }
+    </style>
+
+
+    <style>
+        /* Updated Navbar CSS */
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            /* Center the items horizontally */
+            align-items: center;
+            /* Center items vertically */
+            position: fixed;
+            /* Fixed to the top */
+            top: 20px;
+            /* Align to the top */
+            left: 35%;
+            /* Center horizontally */
+            transform: translateX(-50%);
+            /* Adjust for centering */
+            background: linear-gradient(135deg, rgb(53, 52, 52), rgb(56, 56, 56), rgb(51, 51, 51));
+            /* Dark gradient */
+            padding: 0 0;
+            /* Padding for spacing */
+            border-radius: 16px !important;
+            /* Rounded edges */
+            opacity: 0;
+            /* Initially hidden */
+            transform: translateY(-100%);
+            /* Initially out of view */
+            animation: slideDown 1s forwards;
+            /* Slide-down animation */
+            transition: all 0.3s ease;
+            /* Smooth transition for hover effects */
+        }
+
+        /* Animation keyframes */
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style for nav items */
+        .nav-item {
+            text-align: center;
+            /* Center align text and icons */
+            display: flex;
+            /* Flex layout for icon and text */
+            align-items: center;
+            /* Vertically center icon and text */
+            position: relative;
+            /* For tooltip-like span positioning */
+        }
+
+
+        /* Style for nav links */
+        .nav-item a {
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            /* Remove underlines */
+            transition: background-color 0.2s ease, transform 0.3s ease;
+            /* Smooth effects */
+            display: flex;
+            /* Align content horizontally */
+            align-items: center;
+            /* Center align */
+        }
+
+        /* Hidden span text */
+        .nav-item span {
+            font-size: 0.75rem;
+            /* Text size */
+            color: rgba(255, 255, 255, 0.8);
+            /* Slightly lighter text color */
+            margin-left: 8px;
+            /* Space between icon and text */
+            overflow: hidden;
+            /* Hide content */
+            white-space: nowrap;
+            /* Prevent wrapping */
+            max-width: 0;
+            /* Initially hidden */
+            opacity: 0;
+            /* Fully transparent */
+            transition: all 0.3s ease;
+            /* Smooth reveal on hover */
+        }
+
+        /* Show span text on hover */
+        .nav-item:hover span {
+            max-width: 100px;
+            /* Expand to fit content */
+            opacity: 1;
+            /* Fully visible */
+
+        }
+
+        /* Zoom-in effect on icon hover */
+        .navbar-nav a:hover {
+            transform: scale(1.1);
+            /* Slight zoom-in effect */
+            border-radius: 16px;
+            /* Rounded corners on hover */
+        }
+
+        /* Icons styling */
+        .nav-item i {
+            font-size: 1rem;
+            /* Icon size */
+            margin-left: 4px;
+
+        }
+
+
+        /* Default hover effect */
+        .default-hover {
+            background-color: rgba(255, 0, 0, 0.5);
+            /* Semi-transparent red background */
+            border-radius: 16px;
+
+        }
+
+        .default-hover span {
+            max-width: 100px;
+            opacity: 1;
+        }
+
+        /* Active state styling */
+        .nav-item.active {
+            background-color: rgba(0, 128, 0, 0.5);
+            /* Greenish background for active state */
+            border-radius: 16px;
+        }
+
+        /* Transition for smooth effects */
+        .nav-item {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Standard hover effect */
+        .nav-item:hover {
+            background-color: rgba(255, 0, 0, 0.5);
+            border-radius: 16px;
+            /* Rounded corners on hover */
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll(".nav-item");
+            const defaultItem = document.querySelector(".default-hover");
+            let isClicked = false;
+
+            navItems.forEach((item) => {
+                // Handle mouseover (hover) events
+                item.addEventListener("mouseover", () => {
+                    if (!isClicked) {
+                        defaultItem.classList.remove("default-hover");
+                    }
+                });
+
+                // Handle mouseout events
+                item.addEventListener("mouseout", () => {
+                    if (!isClicked) {
+                        // Restore default hover effect when mouse leaves all items
+                        setTimeout(() => {
+                            const hovered = Array.from(navItems).some((nav) =>
+                                nav.matches(":hover")
+                            );
+                            if (!hovered) {
+                                defaultItem.classList.add("default-hover");
+                            }
+                        }, 100); // Short delay to detect if the mouse is outside all items
+                    }
+                });
+
+                // Handle click events
+                item.addEventListener("click", () => {
+                    isClicked = true;
+
+                    // Remove default-hover from the default item
+                    defaultItem.classList.remove("default-hover");
+
+                    // Remove active state from all nav items
+                    navItems.forEach((nav) => nav.classList.remove("active"));
+
+                    // Set the clicked item as active
+                    item.classList.add("active");
+                });
+            });
+
+            // Reset to default-hover if no item is active and the mouse leaves
+            document.addEventListener("mousemove", () => {
+                const hovered = Array.from(navItems).some((nav) =>
+                    nav.matches(":hover")
+                );
+                if (!hovered && !isClicked) {
+                    defaultItem.classList.add("default-hover");
+                }
+            });
+        });
+    </script>
 
 
 
@@ -787,346 +964,362 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="slider-overlay"></div>
         </div>
 
-            <div class="slide-text-wrapper">
-                <div class="container">
-                    <div class="slide-text clearfix">
-                        <!-- Replacing typing text with image -->
-                        <img src="images/logo.png" alt="Your Image" class="logo-image">
-                    </div>
+        <div class="slide-text-wrapper">
+            <div class="container">
+                <div class="slide-text clearfix">
+                    <!-- Replacing typing text with image -->
+                    <img src="images/logo.png" alt="Your Image" class="logo-image">
                 </div>
             </div>
-
-
-            <style>
-                .slider-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(121, 1, 1, 0.5); /* Transparent dark overlay */
-    z-index: 2; /* Overlay sits above images */
-    pointer-events: none; /* Allow interaction with slides below */
-}
-           
-.animated-logo {
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.5) translateY(50px); /* Smaller and slightly down */
-    transition: opacity 0.5s ease, transform 0.7s ease;
-    will-change: opacity, transform;
-}
-/* Mobile View: Apply negative margin */
-@media only screen and (max-width: 768px) {
-    .animated-logo {
-        margin-top: -20px; /* Adjust as needed */
-        transform: scale(0.5) translateY(0px); /* Adjust translateY if needed */
-    }
-    .logo-image {
-    width: 45%;
-    height: auto;
-    display: inline-block;
-}
-}
-
-.animated-logo.visible {
-    opacity: 1; /* Fully visible */
-    transform: scale(1) translateY(0); /* Normal size and position */
-}
-
-/* Optional: Add bounce effect */
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translateY(200px);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05) translateY(-20px);
-    }
-    100% {
-        transform: scale(1) translateY(0);
-    }
-}
-
-.slide-buttons .slide-button.active .ic {
-    background-color: maroon; /* Active icon background color */
-}
-
-.slide-buttons .slide-button a {
-    text-decoration: none; /* Remove underline from the links */
-    color: inherit; /* Ensure text color follows button state */
-}
-
-.slide-text-wrapper {
-    text-align: center;
-    padding: 10px;
-    margin-top: -375px;
-}
-
-.container {
-    margin: 0 auto; /* Corrected syntax from "-50 auto" */
-}
-
-.slide-text {
-    position: relative;
-    display: inline-block;
-}
-
-.logo-image {
-    max-width: 45%;
-    height: auto;
-    display: inline-block;
-}
-
-
-</style>
-
-            
-            
-            <!-- Add Font Awesome for the icon -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
- <div class="slide-buttons-wrapper">
-    <div class="slide-buttons clearfix">
-        <div class="slide-button" id="roomButton">
-            <a href="javascript:;">
-                <div class="ic" id="roomIcon">
-                    <img src="images/slide-ic1.png" alt="" class="img-fluid">
-                </div>
-                <div class="hr"></div>
-                <div class="txt1">Room</div>
-            </a>
         </div>
-        <div class="slide-button" id="eventButton">
-            <a href="javascript:;">
-                <div class="ic" id="eventIcon">
-                    <img src="images/slide-ic3.png" alt="" class="img-fluid">
+
+
+        <style>
+            .slider-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(121, 1, 1, 0.5);
+                /* Transparent dark overlay */
+                z-index: 2;
+                /* Overlay sits above images */
+                pointer-events: none;
+                /* Allow interaction with slides below */
+            }
+
+            .animated-logo {
+                opacity: 0;
+                /* Initially hidden */
+                transform: scale(0.5) translateY(50px);
+                /* Smaller and slightly down */
+                transition: opacity 0.5s ease, transform 0.7s ease;
+                will-change: opacity, transform;
+            }
+
+            /* Mobile View: Apply negative margin */
+            @media only screen and (max-width: 768px) {
+                .animated-logo {
+                    margin-top: -20px;
+                    /* Adjust as needed */
+                    transform: scale(0.5) translateY(0px);
+                    /* Adjust translateY if needed */
+                }
+
+                .logo-image {
+                    width: 40%;
+                    height: auto;
+                    display: inline-block;
+                }
+            }
+
+            .animated-logo.visible {
+                opacity: 1;
+                /* Fully visible */
+                transform: scale(1) translateY(0);
+                /* Normal size and position */
+            }
+
+            /* Optional: Add bounce effect */
+            @keyframes bounceIn {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.3) translateY(200px);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1.05) translateY(-20px);
+                }
+
+                100% {
+                    transform: scale(1) translateY(0);
+                }
+            }
+
+            .slide-buttons .slide-button.active .ic {
+                background-color: maroon;
+                /* Active icon background color */
+            }
+
+            .slide-buttons .slide-button a {
+                text-decoration: none;
+                /* Remove underline from the links */
+                color: inherit;
+                /* Ensure text color follows button state */
+            }
+
+            .slide-text-wrapper {
+                text-align: center;
+                padding: 10px;
+                margin-top: -375px;
+            }
+
+            .container {
+                margin: 0 auto;
+                /* Corrected syntax from "-50 auto" */
+            }
+
+            .slide-text {
+                position: relative;
+                display: inline-block;
+            }
+
+            .logo-image {
+                max-width: 40%;
+                height: auto;
+                display: inline-block;
+            }
+        </style>
+
+
+
+        <!-- Add Font Awesome for the icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <div class="slide-buttons-wrapper">
+            <div class="slide-buttons clearfix">
+                <div class="slide-button" id="roomButton">
+                    <a href="javascript:;">
+                        <div class="ic" id="roomIcon">
+                            <img src="images/slide-ic1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="txt1">Room</div>
+                    </a>
                 </div>
-                <div class="hr"></div>
-                <div class="txt1">Event Booking</div>
-            </a>
+                <div class="slide-button" id="eventButton">
+                    <a href="javascript:;">
+                        <div class="ic" id="eventIcon">
+                            <img src="images/slide-ic3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="txt1">Event Booking</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            .slide-buttons-wrapper {
+                border: none;
+            }
+
+
+            .slide-buttons .slide-button .ic {
+                background-color: transparent;
+
+            }
+
+            .slide-buttons .slide-button.active .ic {
+                background-color: maroon;
+            }
+
+            .slide-buttons .slide-button a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            @media (max-width: 768px) {
+                .slide-buttons-wrapper {
+                    margin-top: -400px;
+                    display: block !important;
+                    visibility: visible !important;
+                    opacity: 5 !important;
+                    position: static !important;
+                    z-index: 99586699 !important;
+                }
+
+                .slide-button {
+                    z-index: 9;
+                    display: flex !important;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    width: 120px;
+                    transition: transform 0.3s ease;
+                }
+            }
+        </style>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const roomForm = document.getElementById("roomForm");
+                const eventForm = document.getElementById("eventForm");
+                const roomButton = document.getElementById("roomButton");
+                const eventButton = document.getElementById("eventButton");
+
+                // Default state
+                roomForm.style.display = "block";
+                eventForm.style.display = "none";
+                roomButton.classList.add("active");
+                eventButton.classList.remove("active");
+
+                // Function to set active button
+                function setActiveButton(activeButton, inactiveButton) {
+                    activeButton.classList.add("active");
+                    inactiveButton.classList.remove("active");
+                }
+
+                // Room button click event
+                roomButton.addEventListener("click", function () {
+                    roomForm.style.display = "block";
+                    eventForm.style.display = "none";
+                    setActiveButton(roomButton, eventButton);
+                });
+
+                // Event button click event
+                eventButton.addEventListener("click", function () {
+                    roomForm.style.display = "none";
+                    eventForm.style.display = "block";
+                    setActiveButton(eventButton, roomButton);
+                });
+            });
+        </script>
+
+
+
+
+
+        <div class="booking-wrapper">
+            <div class="container">
+                <div class="booking-inner clearfix">
+                    <!-- Room Form -->
+                    <form id="roomForm" class="form1 clearfix">
+                        <div class="col1 c1">
+                            <div class="input1_wrapper">
+                                <label>Check in</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Check in">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col1 c2">
+                            <div class="input1_wrapper">
+                                <label>Check out</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Check out">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c3">
+                            <div class="select1_wrapper">
+                                <label>Adults</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2">2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c4">
+                            <div class="select1_wrapper">
+                                <label>Children</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">Children</option>
+                                        <option value="1">1 Child</option>
+                                        <option value="2">2 Children</option>
+                                        <option value="3">3 Children</option>
+                                        <option value="4">4 Children</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c5">
+                            <div class="select1_wrapper">
+                                <label>Rooms</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                        <option value="3">3 Rooms</option>
+                                        <option value="4">4 Rooms</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col3 c6">
+                            <button type="submit" class="btn-form1-submit">CHECK AVAILABILITY</button>
+                        </div>
+                    </form>
+
+                    <!-- Event Form -->
+                    <form id="eventForm" class="form1 clearfix" style="display: none;">
+                        <div class="col1 c1">
+                            <div class="input1_wrapper">
+                                <label>Event Date</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Event Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col1 c2">
+                            <div class="input1_wrapper">
+                                <label>End Date</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Check out">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c2">
+                            <div class="select1_wrapper">
+                                <label>Event Name</label>
+                                <div class="select1_inner">
+                                    <select class="select2 select" style="width: 100%">
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Seminar">Seminar</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2 c3">
+                            <div class="input1_wrapper">
+                                <label>Expected Visitors</label>
+                                <div class="input1_inner">
+                                    <input type="number" class="input" placeholder="Visitors"
+                                        style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col2 c3">
+                            <div class="input1_wrapper">
+                                <label>Comments</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="input" placeholder="Comments"
+                                        style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col3 c6">
+                            <button type="submit" class="btn-form1-submit">BOOK EVENT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
 
-<style>
-    
-    .slide-buttons-wrapper {
-        border: none;
-    }
-
-  
-    .slide-buttons .slide-button .ic {
-        background-color: transparent;
-        
-    }
-
-    .slide-buttons .slide-button.active .ic {
-        background-color: maroon;
-    }
-
-    .slide-buttons .slide-button a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .slide-buttons-wrapper{
-            margin-top: -400px;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 5 !important;
-            position: static !important;
-            z-index: 99586699 !important;
-        }
-        .slide-button {
-            z-index: 9;
-            display: flex !important;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            width: 120px;
-            transition: transform 0.3s ease;
-        }
-}
-
-</style>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const roomForm = document.getElementById("roomForm");
-        const eventForm = document.getElementById("eventForm");
-        const roomButton = document.getElementById("roomButton");
-        const eventButton = document.getElementById("eventButton");
-
-        // Default state
-        roomForm.style.display = "block";
-        eventForm.style.display = "none";
-        roomButton.classList.add("active");
-        eventButton.classList.remove("active");
-
-        // Function to set active button
-        function setActiveButton(activeButton, inactiveButton) {
-            activeButton.classList.add("active");
-            inactiveButton.classList.remove("active");
-        }
-
-        // Room button click event
-        roomButton.addEventListener("click", function () {
-            roomForm.style.display = "block";
-            eventForm.style.display = "none";
-            setActiveButton(roomButton, eventButton);
-        });
-
-        // Event button click event
-        eventButton.addEventListener("click", function () {
-            roomForm.style.display = "none";
-            eventForm.style.display = "block";
-            setActiveButton(eventButton, roomButton);
-        });
-    });
-</script>
-
-
-
-
-
-       <div class="booking-wrapper">
-    <div class="container">
-        <div class="booking-inner clearfix">
-            <!-- Room Form -->
-            <form id="roomForm" class="form1 clearfix">
-                <div class="col1 c1">
-                    <div class="input1_wrapper">
-                        <label>Check in</label>
-                        <div class="input1_inner">
-                            <input type="text" class="form-control input datepicker" placeholder="Check in">
-                        </div>
-                    </div>
-                </div>
-                <div class="col1 c2">
-                    <div class="input1_wrapper">
-                        <label>Check out</label>
-                        <div class="input1_inner">
-                            <input type="text" class="form-control input datepicker" placeholder="Check out">
-                        </div>
-                    </div>
-                </div>
-                <div class="col2 c3">
-                    <div class="select1_wrapper">
-                        <label>Adults</label>
-                        <div class="select1_inner">
-                            <select class="select2 select" style="width: 100%">
-                                <option value="1">1 Adult</option>
-                                <option value="2">2 Adults</option>
-                                <option value="3">3 Adults</option>
-                                <option value="4">4 Adults</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col2 c4">
-                    <div class="select1_wrapper">
-                        <label>Children</label>
-                        <div class="select1_inner">
-                            <select class="select2 select" style="width: 100%">
-                                <option value="1">Children</option>
-                                <option value="1">1 Child</option>
-                                <option value="2">2 Children</option>
-                                <option value="3">3 Children</option>
-                                <option value="4">4 Children</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col2 c5">
-                    <div class="select1_wrapper">
-                        <label>Rooms</label>
-                        <div class="select1_inner">
-                            <select class="select2 select" style="width: 100%">
-                                <option value="1">1 Room</option>
-                                <option value="2">2 Rooms</option>
-                                <option value="3">3 Rooms</option>
-                                <option value="4">4 Rooms</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col3 c6">
-                    <button type="submit" class="btn-form1-submit">CHECK AVAILABILITY</button>
-                </div>
-            </form>
-
-            <!-- Event Form -->
-            <form id="eventForm" class="form1 clearfix" style="display: none;">
-                <div class="col1 c1">
-                    <div class="input1_wrapper">
-                        <label>Event Date</label>
-                        <div class="input1_inner">
-                            <input type="text" class="form-control input datepicker" placeholder="Event Date">
-                        </div>
-                    </div>
-                </div>
-                 <div class="col1 c2">
-                    <div class="input1_wrapper">
-                        <label>End Date</label>
-                        <div class="input1_inner">
-                            <input type="text" class="form-control input datepicker" placeholder="Check out">
-                        </div>
-                    </div>
-                </div>
-                <div class="col2 c2">
-                    <div class="select1_wrapper">
-                        <label>Event Name</label>
-                        <div class="select1_inner">
-                            <select class="select2 select" style="width: 100%">
-                                <option value="Wedding">Wedding</option>
-                                <option value="Birthday">Birthday</option>
-                                <option value="Seminar">Seminar</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col2 c3">
-                    <div class="input1_wrapper">
-                        <label>Expected Visitors</label>
-                        <div class="input1_inner">
-                            <input type="number" class="input" placeholder="Visitors" style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col2 c3">
-                    <div class="input1_wrapper">
-                        <label>Comments</label>
-                        <div class="input1_inner">
-                            <input type="text" class="input" placeholder="Comments" style="appearance: textfield; -moz-appearance: textfield; -webkit-appearance: none; margin: 0;">
-                        </div>
-                    </div>
-                </div>
-                
-                
-
-                <div class="col3 c6">
-                    <button type="submit" class="btn-form1-submit">BOOK EVENT</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
-
-        
 
 
     <div id="best-places">
         <div class="container">
-    
+
             <div class="title1">BEST PLACES AROUND THE NAMASKAR</div>
             <div class="title2">FIND YOUR PLACE</div>
-    
+
             <div class="owl-carousel owl-carousel-wide">
                 <!-- Swimming Pools Section -->
                 <div class="item">
@@ -1138,29 +1331,32 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <div class="text-block1">
                                         <div class="text-block1-inner">
                                             <div class="txt2">restro</div>
-                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i> Resort Grounds, Main Namaskar Avenue</div>
+                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i> Resort
+                                                Grounds, Main Namaskar Avenue</div>
                                         </div>
                                     </div>
                                     <div class="txt4">
-                                        Enjoy our state-of-the-art swimming pools, perfect for relaxation and recreation. Features include temperature-controlled waters, poolside dining, and family-friendly amenities.
+                                        Enjoy our state-of-the-art swimming pools, perfect for relaxation and
+                                        recreation. Features include temperature-controlled waters, poolside dining, and
+                                        family-friendly amenities.
                                     </div>
                                     <div class="txt5">
                                         <div class="rest1 clearfix">
-                                            
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">Sauna</div>
                                                 <div class="rest1-txt2">INCLUDES</div>
                                             </div>
                                         </div>
                                         <div class="rest1 clearfix">
-                                         
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">SPA</div>
                                                 <div class="rest1-txt2">INCLUDES</div>
                                             </div>
                                         </div>
                                         <div class="rest1 clearfix">
-                                          
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">Free</div>
                                                 <div class="rest1-txt2">Massage</div>
@@ -1169,8 +1365,8 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
                                 </div>
                                 <figure class="figure">
-                                   <!--<img src="images/place01.jpg" alt="Swimming Pool" class="img-fluid"> --> 
-                                   <img src="images/restro.avif" alt="Swimming Pool" class="img-fluid">
+                                    <!--<img src="images/place01.jpg" alt="Swimming Pool" class="img-fluid"> -->
+                                    <img src="images/restro.avif" alt="Swimming Pool" class="img-fluid">
                                 </figure>
                             </div>
                         </div>
@@ -1186,29 +1382,32 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <div class="text-block1">
                                         <div class="text-block1-inner">
                                             <div class="txt2">Seminar Hall</div>
-                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i> Conference Center, Namaskar Complex</div>
+                                            <div class="txt3"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                Conference Center, Namaskar Complex</div>
                                         </div>
                                     </div>
                                     <div class="txt4">
-                                        Our seminar hall is equipped with modern audio-visual technology, high-speed internet, and ergonomic seating, ideal for corporate events, workshops, and special gatherings.
+                                        Our seminar hall is equipped with modern audio-visual technology, high-speed
+                                        internet, and ergonomic seating, ideal for corporate events, workshops, and
+                                        special gatherings.
                                     </div>
                                     <div class="txt5">
                                         <div class="rest1 clearfix">
-                                           
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">Projector</div>
                                                 <div class="rest1-txt2">INCLUDES</div>
                                             </div>
                                         </div>
                                         <div class="rest1 clearfix">
-                                           
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">Refreshments</div>
                                                 <div class="rest1-txt2">AVAILABLE</div>
                                             </div>
                                         </div>
                                         <div class="rest1 clearfix">
-                                            
+
                                             <div class="rest1-caption">
                                                 <div class="rest1-txt1">Free</div>
                                                 <div class="rest1-txt2">WiFi</div>
@@ -1228,9 +1427,9 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
 
-    
-    
-        </div>
+
+
+    </div>
     </div>
 
 
@@ -1238,7 +1437,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     <div class="top-wrapper"></div>
-    <div id="about" style="background-image: url('images/1985.png'); background-size: cover; background-position: center center; padding: 50px 0;">
+    <div id="about"
+        style="background-image: url('images/1985.png'); background-size: cover; background-position: center center; padding: 50px 0;">
         <div class="container">
 
             <div class="title1">LITTLE ABOUT US</div>
@@ -1251,7 +1451,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="images/logotype.png" alt="" class="img-fluid">
                     </figure>
                     <div class="slider-for">
-                        <div class="slider-item">   
+                        <div class="slider-item">
                             <img src="images/restroooposite.avif" alt="" class="img-fluid">
                         </div>
                         <div class="slider-item">
@@ -1268,20 +1468,25 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="txt1">
                                 Namaskar Hotel Biratnagar — Your one-stop destination for luxurious rooms.
                             </div>
-                            
+
                             <div class="txt2">
                                 <p>
-                                    "At Namaskar Hotel Biratnagar, our mission is to create an unforgettable experience for every guest. 
-                                    Whether you're here to celebrate life's special moments or enjoy a comfortable stay, our team is 
+                                    "At Namaskar Hotel Biratnagar, our mission is to create an unforgettable experience
+                                    for every guest.
+                                    Whether you're here to celebrate life's special moments or enjoy a comfortable stay,
+                                    our team is
                                     dedicated to delivering excellence in every detail."
                                 </p>
                                 <p>
-                                    "We take pride in offering luxurious accommodations, exceptional service, and the perfect venue for 
-                                    your events. Thank you for choosing us as your trusted destination for hospitality and celebrations."
+                                    "We take pride in offering luxurious accommodations, exceptional service, and the
+                                    perfect venue for
+                                    your events. Thank you for choosing us as your trusted destination for hospitality
+                                    and celebrations."
                                 </p>
-                                <p style="text-align: right; font-weight: bold; margin-top: 10px;">- Manager, Namaskar Hotel</p>
+                                <p style="text-align: right; font-weight: bold; margin-top: 10px;">- Manager, Namaskar
+                                    Hotel</p>
                             </div>
-                            
+
                             <div class="txt3">
                                 GEORGE BAGRATION
                             </div>
@@ -1298,10 +1503,14 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                             <div class="txt2">
                                 <p>
-                                    At Namaskar Hotel, we offer world-class services, luxurious accommodations, and the perfect venue for any event. Our dedicated staff is here to ensure your stay or event is memorable and seamless.
+                                    At Namaskar Hotel, we offer world-class services, luxurious accommodations, and the
+                                    perfect venue for any event. Our dedicated staff is here to ensure your stay or
+                                    event is memorable and seamless.
                                 </p>
                                 <p>
-                                    Whether you're visiting for business or leisure, we provide an exceptional experience in a serene environment. Our hotel combines comfort, convenience, and elegance for all our guests.
+                                    Whether you're visiting for business or leisure, we provide an exceptional
+                                    experience in a serene environment. Our hotel combines comfort, convenience, and
+                                    elegance for all our guests.
                                 </p>
                             </div>
                             <div class="txt3">
@@ -1314,17 +1523,22 @@ document.addEventListener("DOMContentLoaded", function () {
                                 Namaskar Hotel Biratnagar
                             </div>
                         </div>
-                        
+
                         <div class="slider-item">
                             <div class="txt1">
-                                Welcome to Namaskar Hotel, your perfect destination for luxury and unforgettable experiences.
+                                Welcome to Namaskar Hotel, your perfect destination for luxury and unforgettable
+                                experiences.
                             </div>
                             <div class="txt2">
                                 <p>
-                                    Namaskar Hotel offers a unique blend of comfort and elegance, making it the ideal choice for both relaxation and celebrations. Our spacious rooms, fine dining, and world-class amenities ensure an unforgettable stay.
+                                    Namaskar Hotel offers a unique blend of comfort and elegance, making it the ideal
+                                    choice for both relaxation and celebrations. Our spacious rooms, fine dining, and
+                                    world-class amenities ensure an unforgettable stay.
                                 </p>
                                 <p>
-                                    Whether you're here for business, a special event, or simply to unwind, our hotel promises to exceed your expectations. Our dedicated staff is committed to providing exceptional service for all your needs.
+                                    Whether you're here for business, a special event, or simply to unwind, our hotel
+                                    promises to exceed your expectations. Our dedicated staff is committed to providing
+                                    exceptional service for all your needs.
                                 </p>
                             </div>
                             <div class="txt3">
@@ -1337,7 +1551,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 Namaskar Hotel Biratnagar
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -1347,21 +1561,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div id="what-client-say">
         <div class="container">
-    
+
             <div class="title1">WHAT CLIENT SAY</div>
-    
+
             <div class="title2">Our clients share their experiences and satisfaction with our services.</div>
-    
+
             <div class="owl-carousel owl-carousel-testimonials">
                 <div class="item">
                     <div class="testimonial-wrapper">
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "I had a fantastic experience. The service was exceptional, and the team made everything so easy. Highly recommend!"
+                                    "I had a fantastic experience. The service was exceptional, and the team made
+                                    everything so easy. Highly recommend!"
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Ram Sharma</div>
                                         <div class="txt2">Software Developer</div>
@@ -1376,10 +1592,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "The team was very professional, and the project was completed on time. I'm really pleased with the outcome!"
+                                    "The team was very professional, and the project was completed on time. I'm really
+                                    pleased with the outcome!"
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Shyam Rathi</div>
                                         <div class="txt2">Graphic Designer</div>
@@ -1394,10 +1612,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "Great customer service! They really took the time to understand my needs and delivered a top-notch result."
+                                    "Great customer service! They really took the time to understand my needs and
+                                    delivered a top-notch result."
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Hari Ghimire</div>
                                         <div class="txt2">Entrepreneur</div>
@@ -1407,16 +1627,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="item">
                     <div class="testimonial-wrapper">
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "I was impressed with the professionalism and attention to detail. The entire process was seamless and effective."
+                                    "I was impressed with the professionalism and attention to detail. The entire
+                                    process was seamless and effective."
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Gita Adhikari</div>
                                         <div class="txt2">Marketing Specialist</div>
@@ -1431,10 +1653,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "This was one of the best collaborations I've ever had. The team exceeded my expectations in every way."
+                                    "This was one of the best collaborations I've ever had. The team exceeded my
+                                    expectations in every way."
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Ram Sharma</div>
                                         <div class="txt2">Software Developer</div>
@@ -1449,10 +1673,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="testimonial-inner">
                             <div class="testimonial clearfix">
                                 <div class="testimonial-caption">
-                                    "The experience was smooth and hassle-free. I'm truly happy with the service and the outcome!"
+                                    "The experience was smooth and hassle-free. I'm truly happy with the service and the
+                                    outcome!"
                                 </div>
                                 <div class="author clearfix">
-                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid"></figure>
+                                    <figure><img src="http://via.placeholder.com/80x80" alt="" class="img-fluid">
+                                    </figure>
                                     <div class="caption">
                                         <div class="txt1">Shyam Rathi</div>
                                         <div class="txt2">Graphic Designer</div>
@@ -1463,34 +1689,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
-    
+
     <div class="bot2-wrapper">
         <div class="container">
             <div class="bot2 clearfix">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="logo2_wrapper">
-                    <div class="footerlogocontainer">
-                        <div class="logo">
-                           <img src="./images/logo.png" alt="" width="100" height="100" class="img-fluid">
+                            <div class="footerlogocontainer">
+                                <div class="logo">
+                                    <img src="./images/logo.png" alt="" width="100" height="100" class="img-fluid">
+                                </div>
+                                <div class="hotel-name">
+                                    NAMASKAR HOTEL
+                                </div>
+                                <div class="estd">
+                                    <span>
+                                        ESTD
+                                    </span>
+                                    <i class="fas fa-heart"></i>
+                                    <span>
+                                        1965
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="hotel-name">
-                            NAMASKAR HOTEL
-                        </div>
-                        <div class="estd">
-                            <span>
-                                ESTD
-                            </span>
-                            <i class="fas fa-heart"></i>
-                            <span>
-                                1965
-                            </span>
-                        </div>
-                    </div>
-                </div>
                     </div>
                     <div class="col-md-3">
                         <div class="bot2-title">Contact Info</div>
@@ -1559,7 +1785,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a href="#">login</a></li>
                 </ul>
 
-                <div class="copyrights">Copyright @2024 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a href="#" target="_blank">Brandwave</a>. All Rights Reserve
+                <div class="copyrights">Copyright @2024 Made with <i class="fa fa-heart" aria-hidden="true"></i> By <a
+                        href="#" target="_blank">Brandwave</a>. All Rights Reserve
                 </div>
 
             </div>
@@ -1567,123 +1794,125 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
 
-</div>
-
-<div class="body-popup" id="popup">
-    <div class="left-section">
-        <h1>Welcome to Namaskar Hotel!</h1>
-        <p style="color: white;">EXPERIENCE THE CHARM AND LUXURY OF OUR HOTEL IN BIRATNAGAR</p>
-        <img src="images/slide01.jpg" alt="Hotel Shanker building with a beautiful garden in front">
     </div>
-    <div class="right-section">
-       
-        <button class="close-button" id="close-popup">X</button>
-        
-        <p>We have tailored special offers just for you. Discover our exclusive deals and make your stay even more memorable!</p>
-        <p>Explore our exclusive deals now and enjoy great savings on your next booking.</p>
-        <button>SEE ALL OFFERS</button>
+
+    <div class="body-popup" id="popup">
+        <div class="left-section">
+            <h1>Welcome to Namaskar Hotel!</h1>
+            <p style="color: white;">EXPERIENCE THE CHARM AND LUXURY OF OUR HOTEL IN BIRATNAGAR</p>
+            <img src="images/slide01.jpg" alt="Hotel Shanker building with a beautiful garden in front">
+        </div>
+        <div class="right-section">
+
+            <button class="close-button" id="close-popup">X</button>
+
+            <p>We have tailored special offers just for you. Discover our exclusive deals and make your stay even more
+                memorable!</p>
+            <p>Explore our exclusive deals now and enjoy great savings on your next booking.</p>
+            <button>SEE ALL OFFERS</button>
+        </div>
+
     </div>
-    
-</div>
 
-<div id="loader" class="loader-wrapper">
-    <img src="images/logo.png" alt="Loading Logo" class="loader-logo">
-</div>
+    <div id="loader" class="loader-wrapper">
+        <img src="images/logo.png" alt="Loading Logo" class="loader-logo">
+    </div>
 
 
 
 
-<script>
-  
-document.addEventListener('DOMContentLoaded', () => {
-    const logo = document.querySelector('.animated-logo');
+    <script>
 
-    // Intersection Observer to detect visibility
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                logo.classList.add('visible'); // Add animation class when visible
-            } else {
-                logo.classList.remove('visible'); // Remove animation class when out of view
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            const logo = document.querySelector('.animated-logo');
+
+            // Intersection Observer to detect visibility
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        logo.classList.add('visible'); // Add animation class when visible
+                    } else {
+                        logo.classList.remove('visible'); // Remove animation class when out of view
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+            observer.observe(logo);
         });
-    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-
-    observer.observe(logo);
-});
-</script>
+    </script>
 
 
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const loader = document.getElementById('loader');
-    const mainContent = document.getElementById('main');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loader');
+            const mainContent = document.getElementById('main');
 
-    // Simulate a loading delay for demonstration
-    setTimeout(() => {
-        loader.style.display = 'none'; // Hide the loader
-        mainContent.style.display = 'block'; // Show the main content
-    }, 2000); // Adjust delay as needed
-});
-
-</script>
-
-
-<script>
-    $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        items: 3, // Default items on larger screens
-        responsive: {
-            0: {
-                items: 1, // 1 item per view on mobile
-            },
-            768: {
-                items: 2, // 2 items per view on tablet
-            },
-            1024: {
-                items: 3, // 3 items per view on larger screens
-            }
-        }
-    });
-});
+            // Simulate a loading delay for demonstration
+            setTimeout(() => {
+                loader.style.display = 'none'; // Hide the loader
+                mainContent.style.display = 'block'; // Show the main content
+            }, 2000); // Adjust delay as needed
+        });
 
     </script>
 
-<script>
 
-// Close the popup after 10 seconds
-setTimeout(() => {
-    document.getElementById('popup').style.display = 'none';
-}, 10000); // 10000ms = 10 seconds
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 3, // Default items on larger screens
+                responsive: {
+                    0: {
+                        items: 1, // 1 item per view on mobile
+                    },
+                    768: {
+                        items: 2, // 2 items per view on tablet
+                    },
+                    1024: {
+                        items: 3, // 3 items per view on larger screens
+                    }
+                }
+            });
+        });
 
-// Close the popup when the "Close" button is clicked
-document.getElementById('close-popup').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-});
-</script>
+    </script>
+
+    <script>
+
+        // Close the popup after 10 seconds
+        setTimeout(() => {
+            document.getElementById('popup').style.display = 'none';
+        }, 10000); // 10000ms = 10 seconds
+
+        // Close the popup when the "Close" button is clicked
+        document.getElementById('close-popup').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/superfish.js"></script>
-<script src="js/jquery.superslides.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/select2.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/jquery.appear.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.superslides.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.appear.js"></script>
 
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 
 
 </body>
+
 </html>
