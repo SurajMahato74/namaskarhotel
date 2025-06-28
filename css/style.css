@@ -1964,8 +1964,7 @@ p {
   color: #fff;
   font-size: 12px;
   text-transform: uppercase;
-  text-decoration: underline;
-  line-height: 40px;
+  line-height: 65px;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-out;

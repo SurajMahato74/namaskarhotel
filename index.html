@@ -15,8 +15,6 @@
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-
     <style>
         /* Fullscreen Loader */
         .loader-wrapper {
@@ -85,7 +83,6 @@
             color: #fff;
             font-size: 12px;
             text-transform: uppercase;
-            text-decoration: underline;
             line-height: 66px;
             position: relative;
             cursor: pointer;
@@ -124,7 +121,6 @@
                 color: #fff;
                 font-size: 12px;
                 text-transform: uppercase;
-                text-decoration: underline;
                 line-height: 40px;
                 position: relative;
                 cursor: pointer;
@@ -997,7 +993,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: rgba(121, 1, 1, 0.5);
+                background: rgba(121, 1, 1, 0.326);
                 /* Transparent dark overlay */
                 z-index: 2;
                 /* Overlay sits above images */
@@ -1136,6 +1132,40 @@
                 text-decoration: none;
                 color: inherit;
             }
+             @media (min-width: 769px) {
+                .slide-buttons-wrapper {
+                    margin-top: -300px;
+                    display: flex !important;
+                    justify-content: center;
+                    visibility: visible !important;
+                    opacity: 5 !important;
+                    width: 100%;
+                    position: absolute !important;
+                    z-index: 99586699 !important;
+                }
+             .slide-buttons {
+                    display: flex !important;
+                    flex-direction: row;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                }
+                .slide-button {
+                    z-index: 9;
+                    display: flex !important;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    width: 120px;
+                    transition: transform 0.3s ease;
+                }
+                .slide-text-wrapper{
+                    margin-top: -390px;
+                }
+                .navbar-nav{
+                    left: 38%;
+                }
+            }
 
             @media (max-width: 768px) {
                 .slide-buttons-wrapper {
@@ -1194,9 +1224,6 @@
                 });
             });
         </script>
-
-
-
 
 
         <div class="booking-wrapper">
@@ -1915,9 +1942,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-
-
-
 
 </body>
 
